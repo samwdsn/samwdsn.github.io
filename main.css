@@ -420,8 +420,8 @@ p {
 }
 .SquircleBackground {
   background-color: var(--highlight-color);
-  padding: 0.1em 1em 0em 10em;
-  margin: 0 0 -1em -10em;
+  padding: 0.1em 1em 0em 14em;
+  margin: 0 0 -.95em -10em;
   border-radius: 2em 0em 2em 2em;
   height: 0.9em;
 }
