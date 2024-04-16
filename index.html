@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Responsive</title>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+ 
+  </head>
+  <body>
+    <section id="Splash" class="splashSection">
+   
+     <div class="Navbar load_nav">
+        <div class="NavLogoContainer ">
+          <svg viewBox="0 0 550 400" class="navlogo_svg">
+            <use xlink:href="SVG/Logo24.svg#Logo"></use>
+          </svg>
+        </div>
+        <button onclick="refreshPage()" class="NavItem">Home</button>
+        <button onclick="scrollToInfo()" class="NavItem">Info</button>
+        <button onclick="scrollToWork()" class="NavItem">Work</button>
+
+        <button onclick="scrollToContact()" class="Button_SQR">
+          Let's Talk!
+        </button>
+
+      </div>
+<div class="SplashLoad_InitialState">
+  <div class="DDB_Desktop DDB_Container moveup1">
+    <svg class="DDB_Design load_splash DDB_Transform" viewBox="0 0 1080 540">
+      <use xlink:href="SVG/DDB_Layered.svg#Design"></use>
+    </svg>
+    <div class="DDB_DB moveup12">
+      <svg class="DDB_Done load_splash DDB_Transform" viewBox="0 0 1080 540">
+        <use xlink:href="SVG/DDB_Layered.svg#Done"></use>
+      </svg>
+      <svg class="DDB_Better load_splash DDB_Transform" viewBox="0 0 1080 540">
+        <use xlink:href="SVG/DDB_Layered.svg#Better"></use>
+      </svg>
+    </div>
+   
+  </div>
+  <div class="DDB_Desktop DDB_Container DDB_L2 load_splash2 ">
+    <svg class="DDB_Design DDB_Design_Outline DDB_Transform moveup2" viewBox="0 0 1080 540">
+      <use xlink:href="SVG/DDB_Layered.svg#Design"></use>
+    </svg>
+  </div>
+
+  <div class="DDB_Mobile DDB_Container moveup1">
+    <svg class="DDB_Design load_splash_m" viewBox="0 0 1080 800">
+      <use xlink:href="SVG/DDB_Layered_Mobile.svg#Design"></use>
+    </svg>
+
+    <div class="DDB_DB moveup12 movedown_Done">
+  <svg class="DDB_Done load_splash_m" viewBox="0 0 1080 800">
+    <use xlink:href="SVG/DDB_Layered_Mobile.svg#Done"></use>
+  </svg>
+</div>
+
+    <div class="DDB_DB moveup12 movedown_DB">
+    <svg class="DDB_Better load_splash_m" viewBox="0 0 1080 800">
+      <use xlink:href="SVG/DDB_Layered_Mobile.svg#Better"></use>
+    </svg>
+    </div>
+  </div>
+
+  <div class="DDB_Mobile DDB_Container DDB_L2 moveup1">
+    <svg class="DDB_Design DDB_Design_Outline load_splash2_m" viewBox="0 0 1080 800">
+      <use xlink:href="SVG/DDB_Layered_Mobile.svg#Design"></use>
+    </svg>
+    <div class="DDB_DB moveup12 movedown_DB">
+      <div class="load_splash2_m"></div>
+      <svg class="DDB_Better DDB_Better_Outline load_splash2_m" viewBox="0 0 1080 800">
+        <use xlink:href="SVG/DDB_Layered_Mobile.svg#Better"></use>
+      </svg>
+    </div>
+   
+  </div>
+
+  <div class="SWDesigner load_splash3">
+    <span class="SW movedown1">Sam Walker</span>
+    <span class="CD highlight movedown1">Creative Designer</span>
+  </div>
+
+</div>    
+      <div class="Scribble_LeftContainer">
+        <lottie-player
+          src="Lottie/Scribble_S_Anim.json"
+          background="transparent"
+          speed="1.6"
+          autoplay
+        ></lottie-player>
+      </div>
+      <div class="Scribble_RightContainer">
+        <lottie-player
+          src="Lottie/Scribble_W_Anim.json"
+          background="transparent"
+          speed="1.3"
+          autoplay
+        ></lottie-player>
+      </div>
+        
+      <div class="ScrollTipContainer movedown1">
+        <div class="scrolldown"></div>
+      </div>
+      <div class="SplashVideoWrapper load_splashvideo MediaCursorHere" onclick="togglePlayPause()">
+        <video id="splashVideo" autoplay muted playsinline loop class="SplashVideo_Desktop SplashVideo_Mobi">
+          <source src="Video/PfolVideo.mp4" type="video/mp4">
+      </video>
+      
+      </div>
+    </section>
+    <div class="TextScrollerWrapper">
+      <p class="TextScrollerLEFT">
+        <span class="highlight">Graphic</span>
+        <span class="highlight">Design</span> • Branding • Motion
+        <span class="highlight">Graphics</span> • 3D Modelling &amp;
+        Visualisation • <span class="highlight">Creative</span> • Video Editing
+        • Web <span class="highlight">Design</span> • Ui/Ux •
+        <span class="highlight">Graphic</span>
+        <span class="highlight">Design</span> • Branding • Motion
+      </p>
+
+      <p class="TextScrollerRIGHT">
+        <span class="highlight">Creative</span> • Video Editing • Web
+        <span class="highlight">Design</span> • Ui/Ux •
+        <span class="highlight">Graphic</span>
+        <span class="highlight">Design</span> • Branding • Motion
+        <span class="highlight">Graphics</span> • 3D Modelling &amp;
+        Visualisation • <span class="highlight">Creative</span> • Video Editing
+        • Web
+        <span class="highlight">Design</span>
+      </p>
+    </div>
+
+    <section id="Info" class="copySection">
+      <div class="BentoDiv">
+        <div class="Bento40">
+          <div class="CopyImage">
+            <img class="InfoImage" src="Image/CD_Image.png" alt="InfoImage">
+          </div>
+        </div>
+        <div class="Bento60">
+          <div class="CopyCopy">
+            <p class="CopyTitles txtload_Info">
+              Elevate your<br />
+              <span class="CopyTitles_Emphasis">creative!</span>
+            </p>
+            <p class="CopyBody txtload_Info">
+              Looking to elevate your brand with a fresh visual identity or
+              captivate your audience with on-trend, engaging creative?
+            </p>
+            <p class="CopyBody txtload_Info">
+              From stills to motion, the mission is to communicate creative
+              solutions and bridge the gap with innovative content that works.
+            </p>
+
+            <div class="txtload_Info">
+              <button onclick="scrollToContact()" class="Button_SQR">
+                Let's Talk!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section ID="Portfolio" class="PortfolioListSection">
+        <div class="BrandWrapper">
+          <div class="PLI_Brand" onclick="PLI_Click(this)">
+            <div class="Portfolio_ListItem" >
+              <p class="Portfolio_ListTitle">Brand</p>
+                  <p class="ViewProj">View</br><span class="highlight">Projects</span></p>
+            </div>
+          </div>
+          
+          <div class="Pfol_Brand_Content Pfol_Hover_Content">
+            <img class="PFCover_Image" src="Image/Branding.jpg" alt="BrandCover" >
+          </div>
+          <div class="Pfol_Container">
+            <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+         
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_Manuka_01.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_Manuka_02.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_Optimal_01.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_Optimal_02.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_MuscFood_01.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_MuscFood_02.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_FiveTwenty_01.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Branding/Brand_FiveTwenty_02.jpg" alt="BrandPortfolioImage">
+              </div>
+              
+ 
+           
+          </div>
+          </div>
+        </div>
+       
+        <div class="WebWrapper">
+          <div class="PLI_Web" onclick="PLI_Click(this);">
+            <div class="Portfolio_ListItem" >
+            <p class="Portfolio_ListTitle">Web</p>
+            <p class="ViewProj">View</br><span class="highlight">Projects</span></p>
+          </div>
+        </div>
+          <div class="Pfol_Web_Content Pfol_Hover_Content">
+            <img class="PFCover_Image" src="Image/Web.jpg" alt="WebCover" >
+          </div>
+          <div class="Pfol_Container">
+            <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_Optimal_01.jpg" alt="WebPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_Optimal_02.jpg" alt="WebPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_KCC_01.jpg" alt="WebPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_KCC_02.jpg" alt="WebPortfolioImage">
+              </div>
+
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_Engagehub_01.jpg" alt="WebPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Web/Web_Engagehub_02.jpg" alt="WebPortfolioImage">
+              </div>
+              
+              </div>
+              
+           
+          </div>
+          </div>
+        </div>
+    
+        <div class="MotionWrapper">
+      <div class="PLI_Motion" onclick="PLI_Click(this)">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle">Motion</p>
+          <p class="ViewProj">View</br><span class="highlight">Projects</span></p>
+        </div>
+      </div>
+          <div class="Pfol_Motion_Content Pfol_Hover_Content">
+            <video autoplay muted playsinline loop class="PFCover_Image">
+              <source src="Video/SWD_Mobile.mp4" type="video/mp4">
+          </video>
+          </div>
+          <div class="Pfol_Container">
+            <div class="Motion_Video_Wide">
+              <iframe src="https://player.vimeo.com/video/800680727?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion"></iframe>
+            </div>
+            
+
+          </div>
+        </div>
+       
+        <div class="SocWrapper">
+          <div class="PLI_Social" onclick="PLI_Click(this)">
+            <div class="Portfolio_ListItem">
+              <p class="Portfolio_ListTitle">Social</p>
+              <p class="ViewProj">View</br><span class="highlight">Projects</span></p>
+            </div>
+          </div>
+          <div class="Pfol_Social_Content Pfol_Hover_Content">
+            <img class="PFCover_Image" src="Image/Social.jpg" alt="SocialCover" >
+          </div>
+          <div class="Pfol_Container">
+            <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+         
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_BlueMoon_01.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_AceFace_01.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_Sesire_01.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_Accointing_01.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_Blanx_01.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/Social/Social_SocialsMIX.jpg" alt="SocialPortfolioImage">
+              </div>
+              
+              
+          </div>
+          </div>
+        </div>
+        
+        <div class="ThreeDWrapper">
+         <div class="PLI_3D" onclick="PLI_Click(this)">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle">3D</p>
+            <p class="ViewProj">View</br><span class="highlight">Projects</span></p>
+          </div>
+         </div>
+          <div class="Pfol_3D_Content Pfol_Hover_Content">
+            <img class="PFCover_Image" src="Image/3D.jpg" alt="3DCover" >
+          </div>
+          <div class="Pfol_Container">
+            <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+         
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Aceface_01.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Aceface_02.jpg" alt="3DPortfolioImage">
+              </div>
+
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_CitrusTwist_01.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_CitrusTwist_02.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Blanx_01.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Blanx_02.jpg" alt="3DPortfolioImage">
+              </div>
+
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Wazz_01.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_Wazz_02.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_SHARK_01.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              <div class="PfolCarouselContainer">
+                <img class="PFCover_Image" src="Image/3D/3D_SHARK_02.jpg" alt="3DPortfolioImage">
+              </div>
+              
+              
+              
+              
+          </div>
+          </div>
+        </div>
+      </section>
+
+    <section ID="Contact" class="contactSection">
+      <div class="BentoDiv GiT_S">
+        <div class="GetInTouch_Section">
+          <p class="GiT_Title txtload_GiT">Let's Talk!</p>
+
+          <form
+            target="_blank"
+            action="https://formsubmit.co/samwdsn@gmail.com"
+            method="POST"
+          >
+            <input
+              name="name"
+              type="text"
+              class="feedback-input"
+              placeholder="Name"
+              required
+            />
+            <input
+              name="email"
+              type="text"
+              class="feedback-input"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              name="text"
+              class="feedback-input"
+              placeholder="Message"
+            ></textarea>
+            <input type="submit" value="SUBMIT" required />
+          </form>
+        </div>
+
+        <div class="Scribble_LeftContainer">
+          <lottie-player
+            id="FormScribblesW"
+            class="FormScribbles_W"
+            src="Lottie/Scribble_W_Anim.json"
+            background="transparent"
+            speed="1.3"
+          ></lottie-player>
+        </div>
+        <div class="Scribble_RightContainer">
+          <lottie-player
+            id="FormScribblesS"
+            class="FormScribbles_S"
+            src="Lottie/Scribble_S_Anim.json"
+            background="transparent"
+            speed="1.6"
+          ></lottie-player>
+        </div>
+      </div>
+    </section>
+
+    <section class="Footer">
+      <div class="SocialWrapper">
+        <a href="https://instagram.com/samwdesign" target="_blank">
+          <div class="SocialButton">
+            <svg class="SocialLogos" viewBox="0 0 85 85">
+              <use xlink:href="SVG/InstagramLogo.svg#Layer_2"></use>
+            </svg>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/samwdesign/" target="_blank">
+          <div class="SocialButton">
+            <svg class="SocialLogos" viewBox="0 0 80 79.78">
+              <use xlink:href="SVG/LinkedInLogo.svg#Layer_2"></use>
+            </svg>
+          </div>
+        </a>
+
+        <a href="mailto:samwdsn@gmail.com" target="_blank">
+          <div class="SocialButton">
+            <svg class="SocialLogos" viewBox="0 0 80 79.78">
+              <use xlink:href="SVG/Email.svg#Layer_2"></use>
+            </svg>
+          </div>
+        </a>
+
+        <button
+          style="
+            border: none;
+            background: none;
+            color: transparent;
+            cursor: pointer;
+          "
+          onclick="scrollToTop()"
+        >
+          <div class="SocialButton">
+            <p style="margin-top: -2.5px">BACK TO TOP</p>
+          </div>
+        </button>
+      </div>
+
+      <p class="footertext">
+        <svg class="FooterLogo" viewBox="0 0 550 400">
+          <use xlink:href="SVG/Logo24.svg#Logo"></use>
+        </svg>
+        © Sam Walker • Freelance Creative • 2024
+      </p>
+    </section>
+
+    <div class="customCursor CCSwipe">
+      <p><span>❮</span> SWIPE <span>❯</span></p>
+    </div>
+    <div id="playPauseButton" class="customCursor CCMedia">
+      <p><span id="playPauseIcon">⏯</span></p>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  </body>
+</html>
