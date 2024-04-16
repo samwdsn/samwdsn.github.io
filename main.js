@@ -1,9 +1,9 @@
 // window.addEventListener("load", () => {});
-var preloadAnimation1 = new Image();
-preloadAnimation1.src = "Lottie/Scribble_S_Anim.json";
+// var preloadAnimation1 = new Image();
+// preloadAnimation1.src = "Lottie/Scribble_S_Anim.json";
 
-var preloadAnimation2 = new Image();
-preloadAnimation2.src = "Lottie/Scribble_W_Anim.json";
+// var preloadAnimation2 = new Image();
+// preloadAnimation2.src = "Lottie/Scribble_W_Anim.json";
 
 // Smooth Scroll "lenis" malarkey
 const lenis = new Lenis({

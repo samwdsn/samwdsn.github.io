@@ -676,11 +676,6 @@ button {
   width: 100vw;
 }
 
-.PFCover_Image {
-  width: 100%;
-  height: auto;
-}
-
 @media screen and (min-width: 1024px) {
   .PLI_Brand:hover + .Pfol_Brand_Content {
     visibility: visible;
@@ -764,15 +759,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  img {
-    width: 100%;
-  }
+  position: relative;
 }
 
-.PfolCarouselContainer img {
+/* .PfolCarouselContainer img {
   width: 100%;
-}
+  height: auto;
+} */
 
 .EdgeFade {
   mask-image: linear-gradient(
@@ -802,6 +795,10 @@ button {
   overflow: hidden;
 
   /* background-color: grey; */
+}
+.PFCover_Image {
+  height: auto;
+  width: 100%;
 }
 
 /* GetInTouch _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
@@ -1410,6 +1407,14 @@ textarea {
       black 100%,
       transparent 100%
     );
+  }
+
+  .PFCover_Image {
+    height: 100%;
+    width: auto;
+  }
+  .owl-carousel .owl-item img {
+    width: auto;
   }
   /* GetInTouch _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
   .GiT_Title {
