@@ -1,34 +1,45 @@
 :root {
-  --Highlight-color: #ff7800;
-  --Text-color: #161514;
-  --Background-color: #fae9d9;
-  --Background-alt: #f7decd;
-  --Font-Media: "Media_BoldItalic";
-  --Font-Clash: "Clash_Regular";
+  /* --Highlight-color: #ff006c; */
+  --Highlight-color: #ff950a;
 
-  /* --Highlight-color: #ff7800;
-  --Text-color: #fae9d9;
-  --Background-color: #161514;
-  --Background-alt: #3a3530;
-  --Font-Media: "Media_BoldItalic";
-  --Font-Clash: "Clash_Regular"; */
+  --Text-color: #212121;
 
-  /* --Background-color: #fdf1e6;
-  --Background-alt: #f1ddd0; */
+  --Background-color: #fffae3;
+  /* --Background-color: #fff8f0; */
+  --Font-titles: "Obviously_Narrow_Black";
+  --Font-copy: "Obviously_Narrow_SemiB";
 }
 
 @font-face {
-  font-family: "Media_BoldItalic";
-  src: url("Fonts/MediaSans_BoldItalic.otf");
+  font-family: "Obviously_Narrow_Black";
+  src: url("Font/ObviouslyNarrow-Black.otf");
+  font-style: normal;
 }
 @font-face {
-  font-family: "Clash_Regular";
-  src: url("Fonts/ClashGrotesk-Regular.otf");
+  font-family: "Obviously_Narrow_Black";
+  src: url("Font/ObviouslyNarrow-BlackItalic.otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Obviously_Narrow_SemiB";
+  src: url("Font/ObviouslyNarrow-SemiBold.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Obviously_Narrow_SemiB";
+  src: url("Font/ObviouslyNarrow-SemBdIta.otf");
+  font-style: italic;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--Background-color);
-  /* background-color: grey; */
   margin: 0 auto;
 }
 
@@ -38,6 +49,7 @@ p {
 
 .highlight {
   color: var(--Highlight-color);
+  transition: all 0.3s ease-in-out;
 }
 
 button {
@@ -45,26 +57,7 @@ button {
   cursor: pointer;
 }
 
-.Button_SQR {
-  background-color: var(--Highlight-color);
-  border-radius: 35px 35px 35px 00px;
-  padding: 0.5em 1.5em 0.5em 1.5em;
-
-  white-space: nowrap;
-
-  font-family: var(--Font-Media);
-  text-transform: uppercase;
-  font-size: 1em;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.Button_SQR:hover {
-  background-color: var(--Text-color);
-  color: var(--Highlight-color);
-}
-
-.section_Base {
+.Section_Base {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,507 +72,582 @@ button {
 
   background-color: var(--Background-color);
 }
-/* CustomCursors _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
 
-.customCursor {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: var(--Highlight-color);
+/* xBP DESKTOP____________________________________________________________________*/
+/* xBP DESKTOP____________________________________________________________________*/
 
+/* Splash_____________________________________________________________________*/
+.Section_Splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+
+  position: relative;
+  /* overflow-x: hidden; */
+  /* margin-bottom: 100px; */
+
+  /* background-color: grey; */
+}
+
+/* SplashVideo_____________________________________________________________________*/
+
+.Splash_Video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: auto;
+  aspect-ratio: 19/9;
+
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 30px;
+
+  opacity: 0;
+
+  /* position: absolute;
+  top: 25em; */
+
+  z-index: 2;
+  /* background-color: lightgrey; */
+  animation: VideoLoad 1s ease-in-out 0.2s forwards;
+}
+
+@keyframes VideoLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.Splash_Video video {
+  width: 100%;
+  height: auto;
+}
+
+.Splash_Video_Desktop {
+  visibility: visible;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Splash_Video_Mobile {
+  visibility: hidden;
+  display: none;
+  width: 0%;
+  height: auto;
+}
+
+.SplashSpacer {
+  margin-top: 15em;
+  width: 95vw;
+  height: auto;
+  aspect-ratio: 20/9;
+}
+/* TitleText_____________________________________________________________________*/
+
+.L1 {
+  /* position: absolute; */
+  z-index: -1;
+}
+
+.L2 {
+  position: absolute;
+  z-index: 3;
+}
+
+.L2 .DDBText {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px var(--Background-color);
+}
+
+.L2 .DDBTextHighlight {
+  color: rgba(0, 0, 0, 0);
+}
+
+.L2 .splashAst {
+  color: rgba(0, 0, 0, 0);
+}
+.DDBPos {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  overflow: hidden;
+
+  width: 100vw;
+}
+
+.DDBContainer {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 20em;
+
+  animation: loadin-splash 1.5s ease-in;
+}
+/* @media screen and (min-width: 680px) {
+  .DDBContainer {
+  }
+} */
+
+.DDBText {
+  font-family: var(--Font-titles);
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 20em;
+  color: var(--Text-color);
+
+  animation: scroll-splash 12s linear infinite;
+  animation-delay: 1.49s;
+}
+.DDBTextHighlight {
+  font-style: italic;
+  color: var(--Highlight-color);
+}
+.DDBMASK {
+  background-color: var(--Background-color);
+
+  width: 100vw;
+  height: 0px;
+
+  max-height: 20em;
+
+  margin-top: 25px;
+  position: absolute;
+  z-index: 5;
+
+  animation: reveal-up-Desktop 1s ease;
+}
+.splashAst {
+  font-family: Arial, Impact, sans-serif;
+  font-weight: bold;
+  color: var(--Text-color);
+  vertical-align: -0.2em;
+  padding: 0px 0.25em;
+}
+
+@keyframes reveal-up-Desktop {
+  from {
+    height: 20em;
+  }
+  to {
+    height: 0em;
+  }
+}
+
+@keyframes loadin-splash {
+  from {
+    transform: translateX(15vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-splash {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+
+/* Nav_____________________________________________________________________*/
+.NavPlaceholder {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  z-index: 10;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  /* opacity: 0; */
-  pointer-events: none;
-  /* mix-blend-mode: difference; */
-  transition: opacity 0.1s;
-  cursor: none;
-
-  font-family: var(--Font-Media);
-  color: var(--Text-color);
-  font-size: 22px;
-
-  span {
-    font-family: arial black;
-    font-weight: bold;
-  }
+  width: 100vw;
+  height: 90px;
+  margin-top: 1.5%;
 }
-
-.customCursor.Show {
-  opacity: 1;
-}
-
-.CCSwipe {
-  opacity: 0;
-}
-.CCSwipe.Show {
-  opacity: 1;
-}
-
-.CCMedia {
-  opacity: 0;
-}
-.CCMedia.Show {
-  opacity: 1;
-}
-
-.no-cursor {
-  cursor: none;
-}
-
-.CCMedia span {
-  font-size: 3em;
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-}
-/* NAV _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
 .Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
 
-  top: 3vh;
-  position: absolute;
+  position: relative;
 
-  width: 40vw;
-  min-width: 550px;
-  height: 60px;
+  padding: 0% 5%;
 
-  border-radius: 30px;
-  border: 2px solid var(--Text-color);
-  padding: 0vw 3vw 0vw 3vw;
+  width: 95vw;
+  height: 80px;
 
-  font-family: var(--Font-Media);
-  font-size: 1.25em;
-  color: var(--Text-color);
-  text-transform: uppercase;
+  border-radius: 50px;
+  border: var(--Text-color) solid 2px;
 
-  z-index: 10;
-  background-color: var(--Background-color);
+  /* margin-top: 2.5%; */
+  overflow: hidden;
 
-  button {
-    font-size: 1em;
+  animation: navexpand 1s ease;
+}
+
+@keyframes navexpand {
+  from {
+    width: 70vw;
+    opacity: 0;
+  }
+  to {
+    width: 95vw;
+    opacity: 1;
   }
 }
 
-.NavLogoContainer {
-  display: flex;
-  align-items: center;
-  width: auto;
-  min-width: 50px;
-  height: 50px;
-
-  fill: var(--Text-color);
+.NavLogo {
+  font-family: var(--Font-titles);
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: var(--Text-color);
 }
-.navlogo_svg {
-  width: auto;
-  min-width: 50px;
-  max-height: 50px;
+
+.NavLogo span {
+  vertical-align: -10px;
+}
+
+.NavMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 40%;
+  font-family: var(--Font-copy);
+  font-size: 1.5em;
+  color: var(--Text-color);
+  /* text-transform: uppercase; */
+}
+
+.NavMenu span {
+  vertical-align: -0.2em;
 }
 
 .NavItem {
-  padding: 0px 10px 0px 10px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .NavItem:hover {
   color: var(--Highlight-color);
 }
 
-/* SPLASH _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.splashSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.NavButton {
+  background-color: var(--Highlight-color);
+  border-radius: 1.5em;
+  padding: 0.5em 1em;
 
-  width: 100vw;
-  height: 100vh;
-  min-height: 540px;
-  padding: 0px;
-
-  position: relative;
-  overflow: hidden;
-
-  background-color: var(--Background-color);
-}
-.pin-spacer {
-  padding: 0px;
-}
-
-.DDB_Desktop {
-  visibility: visible;
-}
-.DDB_Mobile {
-  visibility: hidden;
-}
-
-.DDB_Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.DDB_Design,
-.DDB_Done,
-.DDB_Better {
-  width: 50vw;
-  min-width: 700px;
-  height: auto;
-
-  fill: var(--Text-color);
-  position: absolute;
-  z-index: 1;
-}
-
-.DDB_Better {
-  fill: var(--Highlight-color);
-}
-
-.DDB_Design_Outline,
-.DDB_Done_Outline,
-.DDB_Better_Outline {
-  fill: none;
-  stroke: var(--Background-color);
-  mix-blend-mode: difference;
-  stroke-width: 2px;
-  z-index: 5;
-  /* display: none; */
-  pointer-events: none;
-  cursor: none;
-}
-
-.DDB_Better_Outline {
-  stroke: var(--Highlight-color);
-}
-
-.DDB_L2 {
-  z-index: 5;
-}
-
-.DDB_DB {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.Scribble_LeftContainer {
-  position: absolute;
-  left: -10vw;
-  height: auto;
-  width: 30vw;
-  z-index: 0;
-}
-
-.Scribble_RightContainer {
-  position: absolute;
-  right: 0;
-  height: auto;
-  width: 25vw;
-  z-index: 0;
-}
-
-.SWDesigner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 60vw;
-  height: auto;
-
-  position: absolute;
-  bottom: 5%;
-
-  font-family: var(--Font-Clash);
+  font-family: var(--Font-titles);
+  font-style: italic;
   text-transform: uppercase;
-  color: var(--Text-color);
-  font-size: 1.25em;
   white-space: nowrap;
 
-  span {
-    width: 200px;
-    white-space: nowrap;
-  }
+  transition: all 0.2s ease;
 }
-.SW {
-  text-align: end;
-  letter-spacing: 0.2em;
-  padding-right: 10vw;
+.NavButton span {
+  vertical-align: -0.2em;
 }
-.CD {
-  padding-left: 10vw;
-}
-
-.ScrollTipContainer {
-  width: 25px;
-  height: 60px;
-  border: 2px solid var(--Text-color);
-  border-radius: 15px;
-  position: absolute;
-  bottom: 5%;
-  z-index: 10;
-}
-.scrolldown {
-  width: 16px;
-  border-radius: 8px;
+.NavButton:hover {
   background-color: var(--Text-color);
+  color: var(--Highlight-color);
+
+  .BunTop,
+  .BunBottom,
+  .PattyMid {
+    background-color: var(--Highlight-color);
+  }
+}
+/* Burger_____________________________________________________________________*/
+.BurgerNavButton {
+  visibility: hidden;
+  display: none;
+  z-index: 20;
+
   position: absolute;
-  top: 4px;
-  left: 4px;
-  bottom: 34px;
-  animation: scrolldown 3000ms ease-out infinite;
 }
-@keyframes scrolldown {
-  0% {
-    bottom: 34px;
-    opacity: 0;
-  }
 
-  10% {
-    top: 4px;
-  }
-
-  75% {
-    bottom: 4px;
-  }
-
-  100% {
-    top: 34px;
-    bottom: 4px;
-  }
-}
-/* .SplashVideoWrapper {
-
+.Burger {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50px;
+  height: 1.5em;
+  gap: 5px;
+  pointer-events: none;
+}
 
-  border-radius: 30px;
-  overflow: hidden;
+.BurgerStackxx {
+  background-color: var(--Text-color);
+  width: 30px;
+  height: 5px;
+  transition: transform 0.3s ease;
+}
 
-  width: 70vw;
-  height: auto;
-  aspect-ratio: 20/10;
+.BunTop,
+.BunBottom,
+.PattyMid {
+  background-color: var(--Text-color);
+  width: 30px;
+  height: 5px;
+  transition: transform 0.3s ease;
+}
 
-  position: absolute;
-  z-index: 2;
+.BunTop.active {
+  transform: translateY(5px) rotate(45deg);
+  transform-origin: middle center;
+}
+.PattyMid.active {
+  display: none;
+}
+.BunBottom.active {
+  transform: translateY(-5px) rotate(-45deg);
+  transform-origin: middle center;
+}
 
-  video {
-    width: 100%;
-    height: auto;
-  }
-} */
-
-.SplashVideoWrapper {
+.BurgerMenu {
+  visibility: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border-radius: 30px;
+  width: 00vw;
+  height: 100vh;
   overflow: hidden;
 
-  width: 70vw;
-  height: calc(70vw * 0.5); /* 20:10 aspect ratio */
-  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
 
-  position: absolute;
-  z-index: 2;
+  font-family: var(--Font-copy);
+  font-size: 2em;
+  color: var(--Text-color);
 
-  cursor: none;
+  gap: 5%;
+
+  background-color: var(--Highlight-color);
+  transition: all 0.2s ease;
+}
+.BurgerMenu.active {
+  visibility: visible;
+  width: 66vw;
+  /* z-index: 10; */
 }
 
-.SplashVideoWrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  cursor: none;
+.BurgerItem {
+  transition: all 0.2s ease;
 }
 
-.SplashVideo_Desktop {
-  height: auto;
-  width: 100%;
-  cursor: none;
+.BurgerItem:hover {
+  color: var(--Background-color);
 }
 
-/* TextScroller _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+.BurgerMenuButton {
+  background-color: var(--Text-color);
+  border-radius: 1.5em;
+  padding: 0.25em 1em;
+
+  font-family: var(--Font-titles);
+  font-style: italic;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--Background-color);
+
+  transition: all 0.2s ease;
+}
+.BurgerMenuButton span {
+  vertical-align: -0.2em;
+}
+
+.BurgerMenuButton:hover {
+  background-color: var(--Background-color);
+  color: var(--Highlight-color);
+}
+.no-scroll {
+  position: fixed;
+}
+
+/* TextScroller_____________________________________________________________________*/
 .TextScrollerWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* margin: 50px 0px 50px 0px; */
-  width: 100vw;
-
   overflow: hidden;
-  flex-direction: column;
 
-  font-family: var(--Font-Media), Arial, sans-serif;
+  width: 100vw;
+  height: auto;
+
+  padding: 3vw 0vw 4vw 0vw;
+
+  z-index: 4;
+  /* position: absolute;
+  bottom: -100px; */
+
+  flex-direction: column;
+}
+.TextScrollerRIGHT,
+.TextScrollerLEFT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2em;
+
+  font-family: var(--Font-titles), Arial, sans-serif;
   white-space: nowrap;
   font-size: 2.5em;
-  color: var(--Text-color);
   text-transform: uppercase;
-
-  /* transform: rotate(1.5deg); */
 }
-/* COPY _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
 
-.copySection {
+.ScrolltextVA {
+  margin-top: 0.2em;
+}
+
+.TextScrollerRIGHT {
+  background-color: var(--Highlight-color);
+  color: var(--Text-color);
+  transform: rotate(3deg);
+}
+.TextScrollerRIGHT .highlight {
+  color: var(--Background-color);
+}
+.TextScrollerLEFT {
+  background-color: var(--Text-color);
+  transform: rotate(-2deg);
+  color: var(--Background-color);
+}
+/* Info_____________________________________________________________________*/
+
+.Section_Copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 100vw;
-  height: 90vh;
-  min-height: 540px;
-
-  padding: 50px 0px 50px 0px;
-
-  position: relative;
+  height: auto;
   overflow: hidden;
 
-  background-color: var(--Background-color);
+  padding-top: 50px;
+
+  /* background: blue; */
 }
 
-.BentoDiv {
+.CopyImageBlock {
   display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
   flex-wrap: wrap;
 
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
   width: 80vw;
-  min-height: 80vh;
   height: auto;
+  margin-bottom: 20vh;
 
-  gap: 20px;
-  padding: 30px 0px 30px 0px;
-
-  background-color: var(--Background-alt);
+  /* background-color: var(--Highlight-color);
   border-radius: 30px;
-  overflow: hidden;
+  padding: 30px;
+  overflow: hidden; */
 }
 
-.Bento40 {
-  flex: 0 0 calc(40% - 20px);
-  /* width: 40%; */
-  min-width: 300px;
-  height: auto;
-  min-height: 300px;
-
+.CIB_R {
+  flex-direction: row-reverse;
+}
+.CopyBlock {
   display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-.Bento60 {
-  flex: 0 0 calc(60% - 20px);
-  /* width: 60%; */
-  min-width: 300px;
-  height: auto;
-  min-height: 300px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.CopyImage {
-  /* background-color: rgb(153, 89, 89); */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 90%;
-  height: auto;
-  aspect-ratio: 4/5;
-
-  border-radius: 30px;
-
-  overflow: hidden;
-  img {
-    height: 100%;
-  }
-}
-
-.CopyImage img {
-  height: 100%;
-}
-
-.InfoImage {
-  width: 100%;
-}
-
-.CopyCopy {
-  display: flex;
-  justify-content: center;
-  align-items: start;
   flex-direction: column;
-  max-width: 600px;
-  /* height: 660px; */
-
-  button {
-    margin: 1em 0em 1em 0em;
-    font-size: 1.5em;
-  }
-}
-
-.CopyCopy button {
-  margin: 1em 0em 1em 0em;
-  font-size: 1.5em;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .CopyTitles {
-  color: var(--Text-color);
-  font-family: var(--Font-Media);
-  font-size: 4.5em;
+  font-family: var(--Font-titles);
   text-transform: uppercase;
-  margin: 0em 0em 0.2em 0em;
-  white-space: nowrap;
+  font-size: 12em;
+  color: var(--Text-color);
+
+  line-height: 0.8em;
+  padding: 0px 10px;
+
+  /* background-color: blue; */
+  /* .highlight {
+    color: var(--Background-color);
+  } */
 }
-.CopyTitles_Emphasis {
-  font-size: 1.3em;
+.CopyTitles span {
+  font-style: italic;
 }
 
 .CopyBody {
+  font-family: var(--Font-copy);
+  font-size: 1.5em;
   color: var(--Text-color);
-  font-family: var(--Font-Clash);
-  font-size: 1.75em;
-  margin: 0.5em 0em 0.5em 0em;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+.CopyBody p {
+  width: 550px;
 }
 
-/* PORTFOLIO _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.PortfolioListSection {
+.CBLeft {
+  align-items: start;
+  text-align: start;
+}
+
+.CBRight {
+  align-items: end;
+  text-align: end;
+}
+
+.CopyImage {
+  /* background-color: lightgrey; */
+  width: 500px;
+  height: auto;
+  aspect-ratio: 4/5;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.CopyImage img {
+  width: 100%;
+  height: auto;
+}
+.CopyImage video {
+  width: 100%;
+  height: auto;
+}
+
+/* Portfolio____________________________________________________________________*/
+.Section_PortfolioList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   width: 100vw;
   height: auto;
 
   position: relative;
-  background-color: var(--Background-color);
 }
-
 .Portfolio_ListItem {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  width: 75vw;
-  height: 150px;
-  padding: 10px 20px 10px 20px;
+  width: 70vw;
+  height: 10em;
+  padding: 10px 20px;
   /* margin-bottom: 30px; */
   border-bottom: 2px solid var(--Highlight-color);
 
@@ -590,11 +658,6 @@ button {
 
   cursor: pointer;
 }
-
-@media (pointer: fine) {
-  /* CHECK IF DEVICE HAS MOUSE ///////////////////////////////////////*/
-}
-
 .Portfolio_ListItem::before {
   content: "";
   position: absolute;
@@ -602,12 +665,8 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    hsla(28, 100%, 50%, 0.318)
-  );
-  transition: top 0.5s ease-in-out;
+  background-color: var(--Highlight-color);
+  transition: top 0.3s ease-in-out;
   z-index: -1;
 }
 
@@ -615,18 +674,26 @@ button {
   top: 0;
 }
 
+.Portfolio_ListItem:hover .highlight {
+  color: var(--Background-color);
+}
+.Portfolio_ListItem:hover .Portfolio_ListTitle {
+  color: var(--Background-color);
+}
+
 .Portfolio_ListTitle {
   color: var(--Text-color);
-  font-family: var(--Font-Media), Arial, sans-serif;
-  font-size: 5em;
+  font-family: var(--Font-titles), Arial, sans-serif;
+  font-size: 8em;
   text-transform: uppercase;
   z-index: 1;
 
+  transition: all 0.3s ease-in-out;
   user-select: none;
+  margin-bottom: -0.2em;
 }
-
 .ViewProj {
-  font-family: var(--Font-Clash), Arial, sans-serif;
+  font-family: var(--Font-copy), Arial, sans-serif;
   line-height: 1em;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -652,15 +719,17 @@ button {
   justify-content: center;
   align-items: center;
 
-  width: 480px;
-  height: 600px;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 4/5;
+
+  margin-left: 25vw;
 
   position: absolute;
 
-  border-radius: 25px;
+  border-radius: 30px;
   z-index: 5;
   pointer-events: none;
-  /* transition: all 0.3s ease; */
 
   /* background-color: lightgray; */
 }
@@ -674,28 +743,30 @@ button {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  /* Adjust this number for wider hover margins */
 }
 
 @media screen and (min-width: 1024px) {
   .PLI_Brand:hover + .Pfol_Brand_Content {
     visibility: visible;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
   }
+
   .PLI_Web:hover + .Pfol_Web_Content {
     visibility: visible;
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
   }
   .PLI_Motion:hover + .Pfol_Motion_Content {
     visibility: visible;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
   }
   .PLI_Social:hover + .Pfol_Social_Content {
     visibility: visible;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
   }
   .PLI_3D:hover + .Pfol_3D_Content {
     visibility: visible;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
   }
 
   .Pfol_Hover_Content {
@@ -728,32 +799,24 @@ button {
   align-items: center;
   position: relative;
   height: 0vh;
-  width: 80vw;
+  width: 70vw;
   overflow: hidden;
   border-radius: 30px;
-
-  /* background-color: rgb(49, 26, 36); */
 
   transition: all 0.5s ease;
 }
 .Pfol_Container.active {
-  /* height: 70vh; */
-  height: 80vh;
-  width: 80vw;
-  margin-top: 20px;
-  /* padding: 30px 10px 30px 10px; */
-
-  background-color: var(--Background-alt);
+  height: 70vh;
+  width: 70vw;
+  margin-top: 10px;
 
   overflow: hidden;
-  /* transition: height 0.5s ease; */
 }
-
 .PfolCarouselContainer {
   width: 480px;
   height: 600px;
-  border-radius: 25px;
-  background-color: rgb(64, 66, 184);
+  border-radius: 30px;
+  /* background-color: rgb(64, 66, 184); */
   overflow: hidden;
 
   display: flex;
@@ -762,92 +825,171 @@ button {
   position: relative;
 }
 
-/* .PfolCarouselContainer img {
-  width: 100%;
-  height: auto;
-} */
+.PF_Image {
+  height: 100%;
+  width: auto;
+  /* width: auto; */
+}
 
 .EdgeFade {
   mask-image: linear-gradient(
     transparent,
-    black 20%,
+    black 10%,
     black 80%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 20%,
+    black 10%,
     black 80%,
     transparent 100%
   );
 }
 
-.Motion_Video_Wide {
+/* LogoTape_____________________________________________________________________*/
+.LogosWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 80%;
-  height: auto;
-  aspect-ratio: 16/9;
-  border-radius: 30px;
   overflow: hidden;
 
-  /* background-color: grey; */
-}
-.PFCover_Image {
+  width: 100vw;
   height: auto;
-  width: 100%;
+
+  padding: 6vw 0vw 4vw 0vw;
+
+  z-index: 4;
+
+  flex-direction: column;
 }
 
-/* GetInTouch _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.contactSection {
+.LogoTapeTop,
+.LogoTapeBottom {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+
+  height: 2em;
+  width: 150vw;
+
+  font-family: var(--Font-titles);
+  font-size: 2.5em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.LogoTapeTop {
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Text-color);
+  color: var(--Highlight-color);
+  transform: rotate(3deg) translateX(000px);
+}
+.LogoTapeBottom {
+  justify-content: start;
+  align-items: center;
+  background-color: var(--Highlight-color);
+  color: var(--Text-color);
+  transform: rotate(-2deg) translateY(100px);
+}
+
+.LogoTapeTop img,
+.LogoTapeBottom img {
+  width: 60%;
+  height: auto;
+}
+.LogoTapeVA {
+  margin-top: 0.25em;
+}
+.LogoTapeVA .highlight {
+  color: var(--Background-color);
+}
+
+/* FOOTER_____________________________________________________________________*/
+
+.Section_Footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 100vw;
-  height: 100vh;
-  min-height: 540px;
+  height: auto;
+  border-radius: 30px 30px 0px 0px;
 
   position: relative;
   overflow: hidden;
 
-  background-color: var(--Background-color);
+  margin-top: 20vh;
+  padding: 10vh 0vh 20vh 0vh;
+
+  background-color: var(--Highlight-color);
 }
 
-.GetInTouch_Section {
+.Section_Footer .highlight {
+  color: var(--Background-color);
+}
+
+.FooterFormBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
+  flex-wrap: wrap;
+  gap: 50px;
+
+  width: 80vw;
+  height: auto;
+}
+
+.KeepInTouch {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.SocialWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.SocialLogos {
+  height: auto;
+  width: 35px;
+  fill: var(--Text-color);
+  z-index: 1;
+}
+
+.SocialButton {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+
+  background-color: var(--Background-color);
+
+  transition: 0.3s;
+}
+
+.SocialButton:hover {
+  background-color: var(--Text-color);
+  color: var(--Background-color);
+
+  .SocialLogos {
+    fill: var(--Highlight-color);
+  }
+}
+
+.ContactFormWrapper {
+  display: flex;
+  justify-content: center;
   align-items: center;
-
-  width: 100%;
-  position: relative;
-  height: 100%;
-}
-
-.GiT_S .Scribble_LeftContainer {
-  transform: scaleX(-1);
-  width: 27vw;
-  left: -100px;
-}
-
-.GiT_S .Scribble_RightContainer {
-  transform: scaleX(-1);
-  width: 27vw;
-  right: -100px;
-}
-
-.GiT_Title {
-  color: var(--Text-color);
-  font-family: var(--Font-Media), Arial, sans-serif;
-  font-size: 6em;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  z-index: 5;
 }
 
 form {
@@ -856,17 +998,20 @@ form {
   justify-content: center;
   align-items: center;
 
-  width: 500px;
+  width: 400px;
+}
+input::placeholder {
+  color: var(--Background-color);
 }
 
 .feedback-input {
-  font-family: var(--Font-Clash);
+  font-family: var(--Font-copy);
   font-size: 1em;
 
-  color: var(--Text-color);
+  color: var(--Background-color);
   line-height: 1.2em;
   background-color: transparent;
-  border: 2px solid var(--Text-color);
+  border: 2px solid var(--Background-color);
   border-radius: 30px;
 
   padding: 15px;
@@ -879,7 +1024,7 @@ form {
 }
 
 .feedback-input:focus {
-  border: 2px solid var(--Highlight-color);
+  border: 2px solid var(--Text-color);
 }
 
 textarea {
@@ -888,10 +1033,13 @@ textarea {
   line-height: 150%;
   resize: vertical;
 }
+textarea::placeholder {
+  color: var(--Background-color);
+}
 
 [type="submit"] {
-  background: var(--Highlight-color);
-  border-radius: 2em 2em 2em 0px;
+  background: var(--Background-color);
+  border-radius: 2em;
   border: 0;
   cursor: pointer;
   color: rgb(0, 0, 0);
@@ -899,9 +1047,12 @@ textarea {
   padding: 0.3em 1.5em 0.3em 1.5em;
   transition: all 0.3s;
 
-  font-family: var(--Font-Media), Arial, sans-serif;
+  font-family: var(--Font-titles), Arial, sans-serif;
   text-transform: uppercase;
+  font-style: italic;
   font-size: 24px;
+  color: var(--Text-color);
+  vertical-align: -0.2em;
 }
 
 [type="submit"]:hover {
@@ -909,93 +1060,23 @@ textarea {
   color: var(--Highlight-color);
 }
 
-/* FOOTER _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.Footer {
-  margin: 0 auto;
-  background-color: var(--Background-alt);
-  width: 100vw;
-  height: 20vh;
-  margin-top: 5vh;
-  padding: 2% 0% 5% 0%;
-
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footertext {
-  color: var(--Text-color);
+.footerText {
+  display: block;
   text-align: center;
-  font-size: 1em;
-  font-family: var(--Font-Clash), Arial, sans-serif;
-  /* text-transform: uppercase; */
 
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer svg {
-  max-width: 40px;
-}
-
-.SocialLogos {
-  height: auto;
-  width: 25px;
-  fill: var(--Text-color);
-  z-index: 1;
-}
-
-.FooterLogo {
-  height: auto;
-  width: 25px;
-  fill: var(--Text-color);
-
-  z-index: 1;
-  margin-top: 5px;
-}
-
-.SocialButton {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-
-  /* background-color: #000000; */
-
-  outline: 2px solid var(--Highlight-color);
-  border-radius: 50px;
-  padding: 10px;
-  height: 30px;
-  width: 30px;
-
-  font-size: 10px;
-  color: var(--Text-color);
-  text-align: center;
-  transition: 0.3s;
-
-  font-family: var(--Font-Media), Arial, sans-serif;
-}
-
-.SocialWrapper {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 25px;
-  margin-bottom: 1%;
-  margin-top: 1%;
-}
-
-.SocialButton:hover {
-  background-color: var(--Highlight-color);
-  outline: 0px solid var(--Highlight-color);
+  font-family: var(--Font-copy);
   color: var(--Background-color);
 
-  .SocialLogos {
-    fill: var(--Background-color);
-  }
+  margin-top: 200px;
+
+  width: 80vw;
+}
+
+/* OWL _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+.owl-carousel {
+  cursor: -webkit-grab;
+  cursor: grab;
+  /* cursor: none; */
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -1007,358 +1088,223 @@ textarea {
   background: var(--Highlight-color);
 }
 
-/* OWL _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.owl-carousel {
-  /* cursor: -webkit-grab;
-    cursor: grab; */
-  cursor: none;
-}
-.test {
-  background-color: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
-
-  width: 100vw;
-  height: 100vh;
-}
-/* AnimStates _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-
-/* SplashLoad _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-.SplashLoad_InitialState {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  /* margin-bottom: -40px; */
-}
-
-.load_splash,
-.load_splash2,
-.load_splash3,
-.load_splash_m,
-.load_splash2_m,
-.load_nav {
-  opacity: 0;
-  animation: backupload 0s ease forwards;
-  animation-delay: 3s;
-}
-
-.load_nav {
-  margin-top: -20px;
-}
-
-.load_splashvideo {
-  opacity: 0;
-  animation: backupload 0s ease forwards;
-  animation-delay: 0.15s;
-}
-
-@keyframes backupload {
-  0% {
-    opacity: inherit;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* xTABLET _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-/* xTABLET _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+/* xBP TABLET_____________________________________________________________________*/
+/* xBP TABLET_____________________________________________________________________*/
 @media screen and (min-width: 680px) and (max-width: 1023px) {
-  /* :root {
-    --Highlight-color: rgb(255, 0, 123);
-  } */
-
-  .Scribble_LeftContainer {
-    top: 5vh;
-    width: 40vw;
-    left: -20vw;
+  :root {
+    --Highlight-color: #87d841;
   }
 
-  .Scribble_RightContainer {
-    bottom: 5vh;
-    width: 35vw;
-    transform: rotate(10deg);
-    right: -5vw;
+  /* Splash_____________________________________________________________________*/
+
+  .Splash_Video {
+    width: 90vw;
+    aspect-ratio: 4/5;
+    bottom: 5em;
   }
 
-  .SplashVideoWrapper {
-    width: 85vw;
-    height: auto;
-    aspect-ratio: 14/9;
-
-    position: absolute;
-    z-index: 2;
-    video {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  /* TextScroller _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .TextScrollerWrapper {
-    font-size: 2em;
-  }
-  /* Copy _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .copySection {
+  .SplashSpacer {
+    margin-top: 15em;
+    width: 90vw;
+    aspect-ratio: 4/5;
     height: auto;
   }
 
-  .BentoDiv {
-    flex-direction: column;
-    width: 85vw;
+  /* Nav_____________________________________________________________________*/
+  .NavItem,
+  .NavButton {
+    display: none;
   }
 
-  .Bento40 {
-    justify-content: center;
+  .NavMenu {
+    justify-content: end;
+    width: 10em;
   }
 
-  .CopyCopy {
-    align-items: center;
-  }
-
-  .CopyBody {
-    width: 90%;
-  }
-
-  .CopyImage {
+  .BurgerNavButton {
+    visibility: visible;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70vw;
-    /* height: auto; */
-    aspect-ratio: 5/4;
-
-    overflow: hidden;
-    img {
-      height: 100%;
-    }
+    position: absolute;
+    z-index: 11;
+  }
+  /* DDBT _____________________________________________________________________*/
+  .DDBText {
+    font-size: 20em;
+  }
+  /* TextScroller_____________________________________________________________________*/
+  .TextScrollerWrapper {
+    padding: 5vw 0vw 5vw 0vw;
   }
 
-  /* Portfolio _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+  /* Info_____________________________________________________________________*/
+  .CopyTitles {
+    font-size: 10em;
+  }
+  /* Portfolio_____________________________________________________________________*/
   .Portfolio_ListItem {
-    width: 85vw;
+    width: 80vw;
   }
 
   .EdgeFade {
-    mask-image: linear-gradient(
-      transparent,
-      black 0%,
-      black 100%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 0%,
-      black 100%,
-      transparent 100%
-    );
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
-  .Pfol_Container {
-    width: 85vw;
+  /* LogoTape_____________________________________________________________________*/
+  .LogoTapeTop,
+  .LogoTapeBottom {
+    font-size: 2em;
+    height: 80px;
+  }
+  .LogosWrapper {
+    padding: 6vh 0vh 10vh 0vh;
   }
 
-  .Pfol_Container.active {
-    height: 85vh;
-    width: 85vw;
+  .LogoTapeBottom {
+    transform: rotate(-2deg) translateY(140px);
   }
 
-  .PfolCarouselContainer {
-    height: 70vh;
-    width: 75vw;
+  .LogoTapeTop img,
+  .LogoTapeBottom img {
+    width: 80%;
+    height: auto;
   }
 
-  /* Contact _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-
-  .GiT_S .Scribble_LeftContainer {
-    transform: scaleX(-1);
-    transform: rotate(-170deg);
-    width: 40vw;
-    left: -40px;
-    top: -60px;
-  }
-
-  .GiT_S .Scribble_RightContainer {
-    transform: scaleX(-1);
-    width: 45vw;
-    right: -100px;
-    bottom: -50px;
+  /* Footer_____________________________________________________________________*/
+  .SocialWrapper {
+    justify-content: center;
+    margin-top: 30px;
   }
 }
 
-/* xMOBILE _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-/* xMOBILE _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+/* xBP MOBILE_____________________________________________________________________*/
+/* xBP MOBILE_____________________________________________________________________*/
 @media screen and (max-width: 679px) {
-  .Button_SQR {
-    padding: 0.5em 1em 0.5em 1em;
+  /* _Splash____________________________________________________________________*/
+  .Splash_Video {
+    width: 90vw;
+    aspect-ratio: 9/14;
   }
-  /* NAV _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .Navbar {
-    width: 80vw;
-    min-width: 80vw;
-    height: 50px;
-    font-size: 0.85em;
+  .SplashSpacer {
+    margin-top: 10em;
+    width: 95vw;
+    aspect-ratio: 9/14;
+    height: auto;
+  }
 
-    .Button_SQR {
-      font-size: 1em;
+  .Section_Splash {
+    /* margin-bottom: 50px; */
+    overflow: hidden;
+  }
+
+  /* Nav_____________________________________________________________________*/
+  .Navbar {
+    height: 60px;
+  }
+  .NavLogo {
+    font-size: 2em;
+  }
+  .NavLogo span {
+    vertical-align: -5px;
+  }
+
+  .NavItem,
+  .NavButton {
+    display: none;
+  }
+
+  .NavMenu {
+    justify-content: end;
+    width: 10em;
+  }
+  .BurgerNavButton {
+    visibility: visible;
+    display: flex;
+    padding: 0.1em 0.5em;
+    position: absolute;
+    z-index: 11;
+  }
+  /* TitleText_____________________________________________________________________*/
+  .DDBContainer {
+    height: 10em;
+    animation: loadin-splash 0.8s ease-in;
+  }
+
+  .DDBText {
+    font-size: 10em;
+    animation: scroll-splash 8s linear infinite;
+    animation-delay: 0.8s;
+  }
+  .splashAst {
+    vertical-align: -0.125em;
+  }
+
+  .DDBMASK {
+    margin-top: 10px;
+    max-height: 12em;
+    animation: reveal-up-Mobile 1s ease;
+  }
+
+  @keyframes reveal-up-Mobile {
+    from {
+      height: 10em;
+    }
+    to {
+      height: 0em;
     }
   }
-  .NavLogoContainer {
-    min-width: 30px;
-    height: 30px;
-  }
-  .navlogo_svg {
-    width: auto;
-    min-width: 30px;
-    height: 30px;
-  }
-  /* SPLASH _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .splashSection {
-    height: 100vh;
-    /* background-color: lightgray; */
+  /* ScrollerText_____________________________________________________________________*/
+
+  .TextScrollerWrapper {
+    padding: 5vw 0vw 2vw 0vw;
   }
 
-  .DDB_Desktop {
-    visibility: hidden;
-  }
-  .DDB_Mobile {
-    visibility: visible;
-    transform: translateY(-30px);
-  }
-
-  .DDB_Design,
-  .DDB_Done,
-  .DDB_Better {
-    width: 85vw;
-    height: auto;
-    min-width: 80vw;
-
-    fill: var(--Text-color);
-    position: absolute;
-  }
-  .DDB_Better {
-    fill: var(--Highlight-color);
-  }
-
-  .DDB_Design_Outline,
-  .DDB_Done_Outline,
-  .DDB_Better_Outline {
-    fill: none;
-    stroke-width: 3px;
-  }
-
-  .Scribble_LeftContainer {
-    top: 10vh;
-    width: 47vw;
-    left: -20vw;
-  }
-
-  .Scribble_RightContainer {
-    bottom: 15vh;
-    width: 42vw;
-    transform: rotate(10deg);
-    right: -5vw;
-  }
-
-  .SWDesigner {
-    font-size: 0.85em;
-    bottom: 13%;
-  }
-
-  .ScrollTipContainer {
-    width: 20px;
-    height: 50px;
-    bottom: 12%;
-  }
-  .scrolldown {
-    width: 12px;
-  }
-
-  .SplashVideoWrapper {
+  .TextScrollerRIGHT,
+  .TextScrollerLEFT {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 90vw;
-    aspect-ratio: 5/4;
-    height: auto;
+    height: 2em;
 
-    position: absolute;
-    z-index: 2;
-
-    video {
-      height: 100%;
-      width: auto;
-    }
-  }
-  .SplashVideo_Mobi {
-    height: 100%;
-    width: auto;
-  }
-
-  /* TextScroller _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .TextScrollerWrapper {
+    font-family: var(--Font-titles), Arial, sans-serif;
+    white-space: nowrap;
     font-size: 1.5em;
-    margin-top: -50px;
-  }
-  /* Copy _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .copySection {
-    height: auto;
-    margin-bottom: -30px;
+    text-transform: uppercase;
   }
 
-  .BentoDiv {
-    width: 90vw;
-    height: auto;
-    flex-direction: column;
+  .ScrolltextVA {
+    margin-top: 0.2em;
   }
-  .Bento40 {
-    justify-content: center;
+  /* Info_____________________________________________________________________*/
+  .CopyImageBlock {
+    margin-bottom: 10vh;
   }
-
-  .CopyCopy {
-    align-items: center;
-    text-align: center;
-    button {
-      font-size: 1.5em;
-      margin: 0;
-    }
+  .CopyBlock {
+    width: 75vw;
   }
-
   .CopyTitles {
-    font-size: 2.75em;
-    width: 90%;
+    font-size: 5em;
+    padding: 0px 5px;
   }
-
-  .CopyTitles_Emphasis {
-    font-size: 1.3em;
-  }
-
   .CopyBody {
     font-size: 1.1em;
-    width: 90%;
-    margin-bottom: 20px;
+    padding: 0px 5px;
+  }
+  .CopyBody p {
+    width: 70vw;
   }
 
-  .CopyImage {
-    aspect-ratio: 5/4;
-  }
-
-  /* Portoflio _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+  /* Portfolio_____________________________________________________________________*/
   .Portfolio_ListItem {
-    width: 85vw;
     height: 80px;
     margin-bottom: 20px;
+    padding: 10px 5px;
+    width: 80vw;
   }
 
   .Portfolio_ListTitle {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 
   .ViewProj {
@@ -1378,80 +1324,122 @@ textarea {
   .Portfolio_ListItem:hover::before {
     all: unset;
   }
+  .Portfolio_ListItem:hover .highlight {
+    color: var(--Highlight-color);
+  }
+  .Portfolio_ListItem:hover .Portfolio_ListTitle {
+    color: var(--Text-color);
+  }
 
   .Pfol_Container {
     width: 90vw;
+    margin-top: 0;
   }
 
   .Pfol_Container.active {
-    height: 65vh;
+    height: 55vh;
     width: 90vw;
+    margin-top: 0;
   }
 
   .PfolCarouselContainer {
-    height: 55vh;
-    width: 80vw;
+    /* width: 85vw;
+    height: 55vh; */
+
+    width: 75vw;
+    height: auto;
+    aspect-ratio: 4/5;
   }
 
   .EdgeFade {
-    mask-image: linear-gradient(
-      transparent,
-      black 0%,
-      black 100%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 0%,
-      black 100%,
-      transparent 100%
-    );
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  /* LogoTape_____________________________________________________________________*/
+  .LogoTapeTop,
+  .LogoTapeBottom {
+    font-size: 1em;
+    width: 200vw;
+    height: 3em;
+    white-space-collapse: preserve-breaks;
+  }
+  .LogosWrapper {
+    padding: 6vh 0vh 7vh 0vh;
+  }
+  .LogoTapeBottom {
+    transform: rotate(-2deg) translateY(80px);
+  }
+  .LogoTapeVA {
+    width: 200px;
+    margin-top: 0em;
+    line-height: 1em;
+
+    display: flex;
   }
 
-  .PFCover_Image {
-    height: 100%;
-    width: auto;
+  .LogoTapeTop img,
+  .LogoTapeBottom img {
+    width: 80%;
+    height: auto;
   }
-  .owl-carousel .owl-item img {
-    width: auto;
+
+  /* Footer_____________________________________________________________________*/
+  .Section_Footer {
+    margin-top: 10vh;
+    padding: 10vh 0vh 10vh 0vh;
   }
-  /* GetInTouch _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .GiT_Title {
-    font-size: 3em;
+  .Section_Footer .CopyTitles {
     text-align: center;
-    margin-bottom: 20px;
+  }
+
+  .SocialWrapper {
+    justify-content: center;
+    margin-top: 30px;
   }
 
   form {
-    width: 85%;
+    width: 80vw;
   }
 
-  .feedback-input {
-    padding: 10px;
-    margin-bottom: 15px;
+  .footerText {
+    margin-top: 100px;
   }
 
-  .GiT_S .Scribble_LeftContainer {
-    transform: scaleX(-1);
-    transform: rotate(-170deg);
-    width: 27vh;
-    left: -25px;
-    top: -30px;
+  /* OWL_____________________________________________________________________*/
+  .owl-carousel .owl-item img {
+    width: auto;
   }
+}
 
-  .GiT_S .Scribble_RightContainer {
-    transform: scaleX(-1);
-    width: 28vh;
-    right: -40px;
-    bottom: -70px;
-  }
+.customCursor01 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--Highlight-color);
 
-  /* Footer _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
-  .Footer {
-    height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: opacity 0.1s;
+  cursor: none;
+
+  font-family: var(--Font-Media);
+  color: var(--Text-color);
+  font-size: 22px;
+
+  span {
+    font-family: arial black;
+    font-weight: bold;
   }
-  .footertext {
-    margin-top: 50px;
-  }
+}
+
+.customCursor01.Show {
+  opacity: 1;
 }
