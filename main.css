@@ -41,6 +41,17 @@
 body {
   background-color: var(--Background-color);
   margin: 0 auto;
+  opacity: 0;
+
+  animation: bodyload 0.2s ease 0.35s forwards;
+}
+@keyframes bodyload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 p {
@@ -114,7 +125,7 @@ button {
 
   z-index: 2;
   /* background-color: lightgrey; */
-  animation: VideoLoad 1s ease-in-out 0.2s forwards;
+  animation: VideoLoad 1s ease-in-out 0.5s forwards;
 }
 
 @keyframes VideoLoad {
@@ -196,6 +207,7 @@ button {
   height: 20em;
 
   animation: loadin-splash 1.5s ease-in;
+  animation-delay: 0.3s;
 }
 /* @media screen and (min-width: 680px) {
   .DDBContainer {
@@ -210,7 +222,7 @@ button {
   color: var(--Text-color);
 
   animation: scroll-splash 12s linear infinite;
-  animation-delay: 1.49s;
+  animation-delay: 1.79s;
 }
 .DDBTextHighlight {
   font-style: italic;
@@ -229,6 +241,7 @@ button {
   z-index: 5;
 
   animation: reveal-up-Desktop 1s ease;
+  animation-delay: 0.3s;
 }
 .splashAst {
   font-family: Arial, Impact, sans-serif;
@@ -294,6 +307,7 @@ button {
   overflow: hidden;
 
   animation: navexpand 1s ease;
+  animation-delay: 0.3s;
 }
 
 @keyframes navexpand {
@@ -1091,7 +1105,7 @@ textarea::placeholder {
 /* xBP TABLET_____________________________________________________________________*/
 /* xBP TABLET_____________________________________________________________________*/
 @media screen and (min-width: 680px) and (max-width: 1023px) {
-/*   :root {
+  /* :root {
     --Highlight-color: #87d841;
   } */
 
@@ -1228,12 +1242,13 @@ textarea::placeholder {
   .DDBContainer {
     height: 10em;
     animation: loadin-splash 0.8s ease-in;
+    animation-delay: 0.3s;
   }
 
   .DDBText {
     font-size: 10em;
     animation: scroll-splash 8s linear infinite;
-    animation-delay: 0.8s;
+    animation-delay: 1.1s;
   }
   .splashAst {
     vertical-align: -0.125em;
@@ -1243,6 +1258,7 @@ textarea::placeholder {
     margin-top: 10px;
     max-height: 12em;
     animation: reveal-up-Mobile 1s ease;
+    animation-delay: 0.3s;
   }
 
   @keyframes reveal-up-Mobile {

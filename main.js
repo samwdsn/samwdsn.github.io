@@ -17,6 +17,13 @@ function toggleActive(element) {
   element.classList.toggle("active");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("SplashVideo");
+  video.addEventListener("canplaythrough", function () {
+    video.play();
+  });
+});
+
 // NavMenu
 function toggleBodyScrollLock() {
   document.body.classList.toggle("no-scroll");
