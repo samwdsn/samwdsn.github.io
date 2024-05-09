@@ -124,7 +124,7 @@ button {
   top: 25em; */
 
   z-index: 2;
-  /* background-color: lightgrey; */
+  background-color: var(--Highlight-color);
   animation: VideoLoad 1s ease-in-out 0.5s forwards;
 }
 
