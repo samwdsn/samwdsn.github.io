@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E4VF5Z8T3R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E4VF5Z8T3R");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shwalky Design | Home</title>
     <link rel="icon" href="Image/ShwalkyFAV.png" type="image/x-icon" />
+
+    <link
+      rel="preload"
+      href="main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="main.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-Black.otf"
+      as="font"
+      type="font/otf"
+    />
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-BlackItalic.otf"
+      as="font"
+      type="font/otf"
+    />
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-SemiBold.otf"
+      as="font"
+      type="font/otf"
+    />
+
+    <link rel="preload" href="main.js" as="script" />
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <link
@@ -45,8 +89,11 @@
   </head>
   <body>
     <section id="Splash" class="Section_Splash">
+      <div class="LoadingScreen">
+        <div class="LoadingBar"></div>
+      </div>
       <div class="NavPlaceholder">
-        <div class="Navbar">
+        <div id="Navbar" class="Navbar">
           <div class="NavLogo">
             <p><span>SHWALKY</span></p>
           </div>
@@ -96,30 +143,10 @@
             Design done <span class="DDBTextHighlight">Better</span
             ><span class="splashAst">*</span>
           </p>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
-        </div>
-        <div class="DDBContainer L2">
-          <div class="DDBMASK"></div>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
         </div>
       </div>
-
       <div class="Splash_Video">
-        <video id="SplashVideo" autoplay muted playsinline loop>
+        <video id="SplashVideo" preload="true" muted loop>
           <source
             id="videoSource"
             src="Video/SWD_Wide-c.mp4"
@@ -132,6 +159,8 @@
             media="(max-width: 1023px)"
           />
         </video>
+
+        <div class="loader"></div>
       </div>
       <div class="TextScrollerWrapper">
         <p class="TextScrollerLEFT">

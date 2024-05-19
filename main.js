@@ -17,6 +17,98 @@ function toggleActive(element) {
   element.classList.toggle("active");
 }
 
+// SplashAnimations
+// function runAnimations() {
+//   const timelineSplash = gsap.timeline();
+
+//   timelineSplash
+//     .from(".LoadingBar", { width: vw(0) })
+//     .from(".LoadingScreen", { opacity: 1, display: "flex", duration: 0.5 })
+//     .to(".Navbar", { opacity: 1, width: vw(95), duration: 1 })
+//     .to(".DDBMASK", { height: 0, delay: 0.25, duration: 1 }, "<")
+//     .from(".DDBContainer", { x: vw(15), delay: 0.01, duration: 1 }, "<")
+//     .to(
+//       ".DDBText",
+//       {
+//         x: "-=100%",
+//         duration: 10,
+//         ease: "none",
+//         repeat: -1,
+//         delay: 0.5,
+//       },
+//       "<"
+//     )
+//     .from(".Splash_Video", { y: 150, delay: -0.4, duration: 1 }, "<")
+//     .to(".Splash_Video", { opacity: 1, delay: 0.0, duration: 1 }, "<");
+// }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   runAnimations();
+// });
+
+function runAnimations() {
+  const timelineSplash = gsap.timeline();
+
+  timelineSplash
+    .to(".Navbar", { opacity: 1, width: "95vw", duration: 1.2 })
+    .to(".DDBMASK", { height: 0, delay: 0.5, duration: 1 }, "<")
+    .from(".DDBContainer", { x: vw(15), delay: 0.01, duration: 1 }, "<")
+    .to(
+      ".DDBText",
+      {
+        x: "-=100%",
+        duration: 10,
+        ease: "none",
+        repeat: -1,
+        delay: 0.5,
+      },
+      "<"
+    )
+    .from(".Splash_Video", { y: 150, delay: -0.4, duration: 1 }, "<")
+    .to(".Splash_Video", { opacity: 1, delay: 0.0, duration: 1 }, "<");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (
+    document.readyState === "complete" ||
+    document.readyState === "interactive"
+  ) {
+    if (performance.navigation.type === 1) {
+      runAnimations();
+    } else {
+      const timelineSplash = gsap.timeline();
+      timelineSplash
+        .from(".LoadingBar", { width: "0vw" })
+        .from(".LoadingScreen", {
+          opacity: 1,
+          display: "flex",
+          duration: 0.25,
+        });
+      setTimeout(runAnimations, 250);
+    }
+  } else {
+    runAnimations();
+  }
+});
+
+// Update video + play on vp change
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("SplashVideo");
+  video.addEventListener("canplaythrough", function () {
+    video.play();
+  });
+});
+
+// // VideoDelay
+// document.addEventListener("DOMContentLoaded", function () {
+//   var video = document.getElementById("SplashVideo");
+//   setTimeout(function () {
+//     video.play().catch((error) => {
+//       console.error("Error attempting to play video:", error);
+//     });
+//   }, 1500);
+// });
+
 // NavMenu
 function toggleBodyScrollLock() {
   document.body.classList.toggle("no-scroll");
@@ -469,7 +561,7 @@ gsap.from(".txtload_Footer1", {
 $(".owl-carousel").owlCarousel({
   loop: true,
   center: true,
-  margin: 100,
+  margin: 80,
   stagePadding: 0,
   nav: false,
   dots: true,
