@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E4VF5Z8T3R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E4VF5Z8T3R");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shwalky Design | Home</title>
+    <link rel="icon" href="Image/ShwalkyFAV.png" type="image/x-icon" />
+
+    <link
+      rel="preload"
+      href="main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="main.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-Black.otf"
+      as="font"
+      type="font/otf"
+    />
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-BlackItalic.otf"
+      as="font"
+      type="font/otf"
+    />
+    <link
+      rel="preload"
+      href="Font/ObviouslyNarrow-SemiBold.otf"
+      as="font"
+      type="font/otf"
+    />
+
+    <link rel="preload" href="main.js" as="script" />
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <section id="Splash" class="Section_Splash">
+      <div class="LoadingScreen">
+        <div class="LoadingBar"></div>
+      </div>
+      <div class="NavPlaceholder">
+        <div id="Navbar" class="Navbar">
+          <div class="NavLogo">
+            <p><span>SHWALKY</span></p>
+          </div>
+          <div class="NavMenu">
+            <button onclick="refreshPage()" class="NavItem">Home</button>
+            <button onclick="scrollToInfo()" class="NavItem">Info</button>
+            <button onclick="scrollToWork()" class="NavItem">Work</button>
+            <button onclick="scrollToContact()" class="NavButton">
+              <span>Let's Talk!</span>
+            </button>
+            <button
+              onclick="ToggleBurgerMenu()"
+              class="NavButton BurgerNavButton"
+            >
+              <div class="Burger">
+                <div class="BunTop"></div>
+                <div class="PattyMid"></div>
+                <div class="BunBottom"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="BurgerMenu">
+        <button onclick="refreshPage()" class="BurgerItem">
+          <span>Home</span>
+        </button>
+        <button onclick="scrollToInfo()" class="BurgerItem">
+          <span>Info</span>
+        </button>
+        <button onclick="scrollToWork()" class="BurgerItem">
+          <span>Work</span>
+        </button>
+        <button onclick="scrollToContact()" class="BurgerMenuButton">
+          <span>Let's Talk!</span>
+        </button>
+      </div>
+      <div class="DDBPos">
+        <div class="DDBContainer L1">
+          <div class="DDBMASK"></div>
+          <p class="DDBText">
+            Design done <span class="DDBTextHighlight">Better</span
+            ><span class="splashAst">*</span>
+          </p>
+          <p class="DDBText">
+            Design done <span class="DDBTextHighlight">Better</span
+            ><span class="splashAst">*</span>
+          </p>
+        </div>
+      </div>
+      <div class="Splash_Video">
+        <video id="SplashVideo" preload="true" muted loop>
+          <source
+            id="videoSource"
+            src="Video/SWD_Wide-c.mp4"
+            type="video/mp4"
+            media="(min-width: 1024px)"
+          />
+          <source
+            src="Video/SWD_Mobile-c.mp4"
+            type="video/mp4"
+            media="(max-width: 1023px)"
+          />
+        </video>
+
+        <div class="loader"></div>
+      </div>
+      <div class="TextScrollerWrapper">
+        <p class="TextScrollerLEFT">
+          <span class="ScrolltextVA">
+            <span class="highlight">Graphic</span>
+            <span class="highlight">Design</span> • Branding • Motion
+            <span class="highlight">Graphics</span> • 3D Modelling &amp;
+            Visualisation • <span class="highlight">Creative</span> • Video
+            Editing • Web <span class="highlight">Design</span> • Ui/Ux •
+            <span class="highlight">Graphic</span>
+            <span class="highlight">Design</span> • Branding • Motion
+          </span>
+        </p>
+
+        <p class="TextScrollerRIGHT">
+          <span class="ScrolltextVA">
+            <span class="highlight">Creative</span> • Video Editing • Web
+            <span class="highlight">Design</span> • Ui/Ux •
+            <span class="highlight">Graphic</span>
+            <span class="highlight">Design</span> • Branding • Motion
+            <span class="highlight">Graphics</span> • 3D Modelling &amp;
+            Visualisation • <span class="highlight">Creative</span> • Video
+            Editing • Web
+            <span class="highlight">Design</span>
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section id="Info" class="Section_Copy">
+      <div class="CopyImageBlock">
+        <div class="CopyBlock CBLeft">
+          <div class="CopyTitles">
+            <p class="txtload_Info1">Keep it</p>
+            <p class="txtload_Info1"><span class="highlight">fresh!</span></p>
+          </div>
+          <div class="CopyBody">
+            <p class="txtload_Info1">
+              Elevate your brand with a fresh visual identity or captivate your
+              audience with on-trend & engaging, creative designs.
+            </p>
+          </div>
+        </div>
+        <div class="CopyImage IMGLOAD">
+          <img src="Image/Fresh.jpg" alt="FreshImage" />
+        </div>
+      </div>
+
+      <div class="CopyImageBlock CIB_R">
+        <div class="CopyBlock CBRight">
+          <div class="CopyTitles">
+            <p class="txtload_Info2">Keep it</p>
+            <p class="txtload_Info2"><span class="highlight">moving!</span></p>
+          </div>
+          <div class="CopyBody">
+            <p class="txtload_Info2">
+              Design doesn’t have to sit still to captivate a crowd, uplift your
+              content with scroll stopping motion design.
+            </p>
+          </div>
+        </div>
+        <div class="CopyImage IMGLOAD">
+          <video autoplay muted playsinline loop>
+            <source src="Image/Motion.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+    <section ID="Portfolio" class="Section_PortfolioList">
+      <div class="BrandWrapper">
+        <div class="PLI_Brand" onclick="PLI_Click(this)">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle"><span>Brand</span></p>
+            <p class="ViewProj">
+              View<br /><span class="highlight">Projects</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="Pfol_Brand_Content Pfol_Hover_Content">
+          <img class="PF_Image" src="Image/Branding.jpg" alt="BrandCover" />
+        </div>
+        <div class="Pfol_Container">
+          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_Manuka_01.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_Manuka_02.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_Optimal_01.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_Optimal_02.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_MuscFood_01.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_MuscFood_02.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_FiveTwenty_01.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Branding/Brand_FiveTwenty_02.jpg"
+                alt="BrandPortfolioImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="WebWrapper">
+        <div class="PLI_Web" onclick="PLI_Click(this);">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle"><span>Web</span></p>
+            <p class="ViewProj">
+              View<br /><span class="highlight">Projects</span>
+            </p>
+          </div>
+        </div>
+        <div class="Pfol_Web_Content Pfol_Hover_Content">
+          <img class="PF_Image" src="Image/Web.jpg" alt="WebCover" />
+        </div>
+        <div class="Pfol_Container">
+          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_Optimal_01.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_Optimal_02.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_KCC_01.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_KCC_02.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_Engagehub_01.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Web/Web_Engagehub_02.jpg"
+                alt="WebPortfolioImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="MotionWrapper">
+        <div class="PLI_Motion" onclick="PLI_Click(this)">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle"><span>Motion</span></p>
+            <p class="ViewProj">
+              View<br /><span class="highlight">Projects</span>
+            </p>
+          </div>
+        </div>
+        <div class="Pfol_Motion_Content Pfol_Hover_Content">
+          <video autoplay muted playsinline loop class="PF_Image">
+            <source src="Image/Motion_02.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="Pfol_Container">
+          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_VOGGT.jpg"
+                class="PF_Image"
+              >
+                <source
+                  src="Image/Motion/01_Voggt_Reel_1.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_PJ.jpg"
+                class="PF_Image"
+              >
+                <source src="Image/Motion/03_PJ_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_BM.jpg"
+                class="PF_Image"
+              >
+                <source src="Image/Motion/04_BlueMoon_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_AB.jpg"
+                class="PF_Image"
+              >
+                <source src="Image/Motion/05_AB_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_SOC.jpg"
+                class="PF_Image"
+              >
+                <source src="Image/Motion/02_SOC_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="PfolCarouselContainer">
+              <video
+                controls
+                playsinline
+                muted
+                poster="Image/Motion/Cover_ACCT.jpg"
+                class="PF_Image"
+              >
+                <source
+                  src="Image/Motion/06_Accointing_1.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="SocWrapper">
+        <div class="PLI_Social" onclick="PLI_Click(this)">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle"><span>Social</span></p>
+            <p class="ViewProj">
+              View<br /><span class="highlight">Projects</span>
+            </p>
+          </div>
+        </div>
+        <div class="Pfol_Social_Content Pfol_Hover_Content">
+          <img class="PF_Image" src="Image/Social.jpg" alt="SocialCover" />
+        </div>
+        <div class="Pfol_Container">
+          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_BlueMoon_01.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_AceFace_01.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_Sesire_01.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_Accointing_01.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_Blanx_01.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/Social/Social_SocialsMIX.jpg"
+                alt="SocialPortfolioImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ThreeDWrapper">
+        <div class="PLI_3D" onclick="PLI_Click(this)">
+          <div class="Portfolio_ListItem">
+            <p class="Portfolio_ListTitle"><span>3D</span></p>
+            <p class="ViewProj">
+              View<br /><span class="highlight">Projects</span>
+            </p>
+          </div>
+        </div>
+        <div class="Pfol_3D_Content Pfol_Hover_Content">
+          <img class="PF_Image" src="Image/3D.jpg" alt="3DCover" />
+        </div>
+        <div class="Pfol_Container">
+          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Aceface_01.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Aceface_02.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_CitrusTwist_01.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_CitrusTwist_02.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Blanx_01.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Blanx_02.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Wazz_01.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_Wazz_02.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_SHARK_01.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+
+            <div class="PfolCarouselContainer">
+              <img
+                class="PF_Image"
+                src="Image/3D/3D_SHARK_02.jpg"
+                alt="3DPortfolioImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="LogosWrapper">
+      <div class="LogoTapeBottom">
+        <img src="Image/ClientLogoTape.png" alt="Logos" />
+        <img src="Image/ClientLogoTape.png" alt="Logos" />
+      </div>
+      <div class="LogoTapeTop">
+        <img src="Image/ClientLogoTape.png" alt="Logos" />
+        <p class="LogoTapeVA">
+          <span
+            >You may have also
+            <span class="highlight">seen my work</span> with:</span
+          >
+        </p>
+        <img src="Image/ClientLogoTape.png" alt="Logos" />
+      </div>
+    </div>
+
+    <section ID="Footer" class="Section_Footer">
+      <div class="FooterFormBlock">
+        <div class="KeepInTouch">
+          <div class="CopyTitles">
+            <p class="txtload_Footer1">Keep in</p>
+            <p class="txtload_Footer1"><span class="highlight">touch!</span></p>
+          </div>
+          <div class="SocialWrapper">
+            <a href="https://instagram.com/samwdesign" target="_blank">
+              <div class="SocialButton">
+                <svg class="SocialLogos" viewBox="0 0 85 85">
+                  <use xlink:href="SVG/InstagramLogo.svg#Layer_2"></use>
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/samwdesign/" target="_blank">
+              <div class="SocialButton">
+                <svg class="SocialLogos" viewBox="0 0 80 79.78">
+                  <use xlink:href="SVG/LinkedInLogo.svg#Layer_2"></use>
+                </svg>
+              </div>
+            </a>
+
+            <a href="mailto:samwdsn@gmail.com" target="_blank">
+              <div class="SocialButton">
+                <svg class="SocialLogos" viewBox="0 0 80 79.78">
+                  <use xlink:href="SVG/Email.svg#Layer_2"></use>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="ContactFormWrapper">
+          <form
+            target="_blank"
+            action="https://formsubmit.co/samwdsn@gmail.com"
+            method="POST"
+          >
+            <input
+              name="name"
+              type="text"
+              class="feedback-input"
+              placeholder="Name"
+              required
+            />
+            <input
+              name="email"
+              type="text"
+              class="feedback-input"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              name="text"
+              class="feedback-input"
+              placeholder="Message"
+            ></textarea>
+            <input type="submit" value="SUBMIT" required />
+          </form>
+        </div>
+      </div>
+      <div class="footerText">
+        <p>
+          © Sam Walker • Freelance Creative Designer • Manchester, UK •
+          #DesignDoneBetter • 2024
+        </p>
+      </div>
+      <div class="customCursor01"></div>
+    </section>
+  </body>
+</html>

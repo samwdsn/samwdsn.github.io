@@ -1,0 +1,1526 @@
+:root {
+  /* --Highlight-color: #ff006c; */
+  --Highlight-color: #ff950a;
+
+  --Text-color: #212121;
+
+  --Background-color: #fffae3;
+  /* --Background-color: #fff8f0; */
+  --Font-titles: "Obviously_Narrow_Black";
+  --Font-copy: "Obviously_Narrow_SemiB";
+}
+
+@font-face {
+  font-family: "Obviously_Narrow_Black";
+  src: url("Font/ObviouslyNarrow-Black.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Obviously_Narrow_Black";
+  src: url("Font/ObviouslyNarrow-BlackItalic.otf");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Obviously_Narrow_SemiB";
+  src: url("Font/ObviouslyNarrow-SemiBold.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Obviously_Narrow_SemiB";
+  src: url("Font/ObviouslyNarrow-SemBdIta.otf");
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Background-color);
+  margin: 0 auto;
+
+  /* animation: bodyload 0.2s ease 0.35s forwards; */
+}
+@keyframes bodyload {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.highlight {
+  color: var(--Highlight-color);
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.Section_Base {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  min-height: 540px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: var(--Background-color);
+}
+
+/* xBP DESKTOP____________________________________________________________________*/
+/* xBP DESKTOP____________________________________________________________________*/
+.Navbar {
+  width: 60vw;
+  opacity: 0;
+}
+.DDBMASK {
+  height: 20em;
+}
+
+/* .DDBText {
+  animation: scroll-splash 12s linear infinite;
+  animation-delay: 1.49s;
+}
+@keyframes scroll-splash {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+} */
+
+.LoadingScreen {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+
+  z-index: 20;
+  background-color: var(--Background-color);
+}
+
+.LoadingBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 5vh;
+
+  background-color: var(--Highlight-color);
+}
+
+/* Splash_____________________________________________________________________*/
+.Section_Splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+
+  position: relative;
+  /* overflow-x: hidden; */
+  /* margin-bottom: 100px; */
+
+  /* background-color: grey; */
+}
+
+/* SplashVideo_____________________________________________________________________*/
+
+.Splash_Video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: auto;
+  aspect-ratio: 19/9;
+
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+
+  opacity: 0;
+
+  /* position: absolute;
+  top: 25em; */
+
+  z-index: 2;
+  /* background-color: var(--Highlight-color); */
+  background-color: #ffcc8a;
+  /* animation: VideoLoad 1s ease-in-out 0.5s forwards; */
+}
+
+.Splash_Video video {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  /* opacity: 0;
+  animation: loadtest100 1s ease forwards 2s; */
+}
+
+@keyframes loadtest100 {
+  to {
+    opacity: 1;
+  }
+}
+
+.Splash_Video_Desktop {
+  visibility: visible;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Splash_Video_Mobile {
+  visibility: hidden;
+  display: none;
+  width: 0%;
+  height: auto;
+}
+
+.SplashSpacer {
+  margin-top: 15em;
+  width: 95vw;
+  height: auto;
+  aspect-ratio: 20/9;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  position: absolute;
+
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid var(--Background-color);
+  border-right-color: var(--Highlight-color);
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* TitleText_____________________________________________________________________*/
+
+.L1 {
+  /* position: absolute; */
+  z-index: -1;
+}
+
+.L2 {
+  position: absolute;
+  z-index: 3;
+}
+
+.L2 .DDBText {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px var(--Background-color);
+}
+
+.L2 .DDBTextHighlight {
+  color: rgba(0, 0, 0, 0);
+}
+
+.L2 .splashAst {
+  color: rgba(0, 0, 0, 0);
+}
+.DDBPos {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  overflow: hidden;
+
+  width: 100vw;
+}
+
+.DDBContainer {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 20em;
+
+  /* animation: slidein-splash 1.5s ease-in; */
+  /* animation-delay: 0.3s; */
+}
+/* @media screen and (min-width: 680px) {
+  .DDBContainer {
+  }
+} */
+
+.DDBText {
+  font-family: var(--Font-titles);
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 18em;
+  color: var(--Text-color);
+
+  /* animation: scroll-splash 12s linear infinite;
+  animation-delay: 1.79s; */
+}
+.DDBTextHighlight {
+  font-style: italic;
+  color: var(--Highlight-color);
+}
+.DDBMASK {
+  background-color: var(--Background-color);
+
+  width: 100vw;
+  /* height: 0px; */
+
+  max-height: 18em;
+
+  margin-top: 25px;
+  position: absolute;
+  z-index: 5;
+
+  /* animation: reveal-up-Desktop 1s ease;
+  animation-delay: 0.3s; */
+}
+.splashAst {
+  font-family: Arial, Impact, sans-serif;
+  font-weight: bold;
+  color: var(--Text-color);
+  vertical-align: -0.2em;
+  padding: 0px 0.25em;
+}
+
+/* Nav_____________________________________________________________________*/
+.NavPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 80px;
+  margin-top: 1.5%;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  padding: 0% 5%;
+
+  /* width: 95vw; */
+  height: 70px;
+
+  border-radius: 50px;
+  border: var(--Text-color) solid 2px;
+
+  /* margin-top: 2.5%; */
+  overflow: hidden;
+
+  /* animation: navexpand 1s ease;
+  animation-delay: 0.3s; */
+}
+
+.NavLogo {
+  font-family: var(--Font-titles);
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: var(--Text-color);
+}
+
+.NavLogo span {
+  vertical-align: -10px;
+}
+
+.NavMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 40%;
+  font-family: var(--Font-copy);
+  font-size: 1.25em;
+  color: var(--Text-color);
+  /* text-transform: uppercase; */
+}
+
+.NavMenu span {
+  vertical-align: -0.2em;
+}
+
+.NavItem {
+  transition: all 0.2s ease;
+}
+
+.NavItem:hover {
+  color: var(--Highlight-color);
+}
+
+.NavButton {
+  background-color: var(--Highlight-color);
+  border-radius: 1.5em;
+  padding: 0.5em 1em;
+
+  font-family: var(--Font-titles);
+  font-style: italic;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+.NavButton span {
+  vertical-align: -0.2em;
+}
+.NavButton:hover {
+  background-color: var(--Text-color);
+  color: var(--Highlight-color);
+
+  .BunTop,
+  .BunBottom,
+  .PattyMid {
+    background-color: var(--Highlight-color);
+  }
+}
+/* Burger_____________________________________________________________________*/
+.BurgerNavButton {
+  visibility: hidden;
+  display: none;
+  z-index: 20;
+
+  position: absolute;
+}
+
+.Burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 1.5em;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.BurgerStackxx {
+  background-color: var(--Text-color);
+  width: 30px;
+  height: 5px;
+  transition: transform 0.3s ease;
+}
+
+.BunTop,
+.BunBottom,
+.PattyMid {
+  background-color: var(--Text-color);
+  width: 30px;
+  height: 5px;
+  transition: transform 0.3s ease;
+}
+
+.BunTop.active {
+  transform: translateY(5px) rotate(45deg);
+  transform-origin: middle center;
+}
+.PattyMid.active {
+  display: none;
+}
+.BunBottom.active {
+  transform: translateY(-5px) rotate(-45deg);
+  transform-origin: middle center;
+}
+
+.BurgerMenu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 00vw;
+  height: 100vh;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  font-family: var(--Font-copy);
+  font-size: 2em;
+  color: var(--Text-color);
+
+  gap: 5%;
+
+  background-color: var(--Highlight-color);
+  transition: all 0.2s ease;
+}
+.BurgerMenu.active {
+  visibility: visible;
+  width: 66vw;
+  /* z-index: 10; */
+}
+
+.BurgerItem {
+  transition: all 0.2s ease;
+}
+
+.BurgerItem:hover {
+  color: var(--Background-color);
+}
+
+.BurgerMenuButton {
+  background-color: var(--Text-color);
+  border-radius: 1.5em;
+  padding: 0.25em 1em;
+
+  font-family: var(--Font-titles);
+  font-style: italic;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--Background-color);
+
+  transition: all 0.2s ease;
+}
+.BurgerMenuButton span {
+  vertical-align: -0.2em;
+}
+
+.BurgerMenuButton:hover {
+  background-color: var(--Background-color);
+  color: var(--Highlight-color);
+}
+.no-scroll {
+  position: fixed;
+}
+
+/* TextScroller_____________________________________________________________________*/
+.TextScrollerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  width: 100vw;
+  height: auto;
+
+  padding: 3vw 0vw 4vw 0vw;
+
+  z-index: 4;
+  /* position: absolute;
+  bottom: -100px; */
+
+  flex-direction: column;
+}
+.TextScrollerRIGHT,
+.TextScrollerLEFT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 120vw;
+  height: 2em;
+
+  font-family: var(--Font-titles), Arial, sans-serif;
+  white-space: nowrap;
+  font-size: 2.1em;
+  text-transform: uppercase;
+}
+
+.ScrolltextVA {
+  margin-top: 0.2em;
+}
+
+.TextScrollerRIGHT {
+  background-color: var(--Highlight-color);
+  color: var(--Text-color);
+  transform: rotate(3deg);
+}
+.TextScrollerRIGHT .highlight {
+  color: var(--Background-color);
+}
+.TextScrollerLEFT {
+  background-color: var(--Text-color);
+  transform: rotate(-2deg);
+  color: var(--Background-color);
+}
+/* Info_____________________________________________________________________*/
+
+.Section_Copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+
+  padding-top: 50px;
+
+  /* background: blue; */
+}
+
+.CopyImageBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
+  flex-wrap: wrap;
+
+  width: 80vw;
+  height: auto;
+  margin-bottom: 15vh;
+
+  /* background-color: var(--Highlight-color);
+  border-radius: 25px;
+  padding: 30px;
+  overflow: hidden; */
+}
+
+.CIB_R {
+  flex-direction: row-reverse;
+}
+.CopyBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.CopyTitles {
+  font-family: var(--Font-titles);
+  text-transform: uppercase;
+  font-size: 10.5em;
+  color: var(--Text-color);
+
+  line-height: 0.8em;
+  padding: 0px 10px;
+
+  min-width: 620px;
+
+  /* background-color: blue; */
+  /* .highlight {
+    color: var(--Background-color);
+  } */
+}
+.CopyTitles span {
+  font-style: italic;
+}
+
+.CopyBody {
+  font-family: var(--Font-copy);
+  font-size: 1.3em;
+  color: var(--Text-color);
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+.CopyBody p {
+  max-width: 550px;
+}
+
+.CBLeft {
+  align-items: start;
+  text-align: start;
+}
+
+.CBRight {
+  align-items: end;
+  text-align: end;
+}
+
+.CopyImage {
+  /* background-color: lightgrey; */
+  /* width: 500px; */
+  width: 30vw;
+  max-width: 500px;
+  min-width: 300px;
+  height: auto;
+  aspect-ratio: 4/5;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.CopyImage img {
+  width: 100%;
+  height: auto;
+}
+.CopyImage video {
+  width: 100%;
+  height: auto;
+}
+
+/* Portfolio____________________________________________________________________*/
+.Section_PortfolioList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+
+  position: relative;
+}
+.Portfolio_ListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 70vw;
+  height: 10em;
+  padding: 10px 20px;
+  /* margin-bottom: 30px; */
+  border-bottom: 2px solid var(--Highlight-color);
+
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s;
+
+  cursor: pointer;
+}
+.Portfolio_ListItem::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Highlight-color);
+  transition: top 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.Portfolio_ListItem:hover::before {
+  top: 0;
+}
+
+.Portfolio_ListItem:hover .highlight {
+  color: var(--Background-color);
+}
+.Portfolio_ListItem:hover .Portfolio_ListTitle {
+  color: var(--Background-color);
+}
+
+.Portfolio_ListTitle {
+  color: var(--Text-color);
+  font-family: var(--Font-titles), Arial, sans-serif;
+  font-size: 8em;
+  text-transform: uppercase;
+  z-index: 1;
+
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  margin-bottom: -0.2em;
+}
+.ViewProj {
+  font-family: var(--Font-copy), Arial, sans-serif;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: var(--Text-color);
+
+  padding: 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  transition: all ease 0.3s;
+}
+
+.Pfol_Brand_Content,
+.Pfol_Web_Content,
+.Pfol_Motion_Content,
+.Pfol_Social_Content,
+.Pfol_3D_Content {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 500px; */
+  width: 30vw;
+  max-width: 500px;
+  min-width: 300px;
+  height: auto;
+  aspect-ratio: 4/5;
+
+  margin-left: 22.5vw;
+
+  position: absolute;
+
+  border-radius: 25px;
+  z-index: 5;
+  pointer-events: none;
+
+  /* background-color: lightgray; */
+}
+
+.PLI_Brand,
+.PLI_Web,
+.PLI_Motion,
+.PLI_Social,
+.PLI_3D {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* Adjust this number for wider hover margins */
+}
+
+@media screen and (min-width: 1024px) {
+  .PLI_Brand:hover + .Pfol_Brand_Content {
+    visibility: visible;
+    /* background-color: lightcoral; */
+  }
+
+  .PLI_Web:hover + .Pfol_Web_Content {
+    visibility: visible;
+    /* background-color: lightcyan; */
+  }
+  .PLI_Motion:hover + .Pfol_Motion_Content {
+    visibility: visible;
+    /* background-color: lightgreen; */
+  }
+  .PLI_Social:hover + .Pfol_Social_Content {
+    visibility: visible;
+    /* background-color: lightgoldenrodyellow; */
+  }
+  .PLI_3D:hover + .Pfol_3D_Content {
+    visibility: visible;
+    /* background-color: lightsalmon; */
+  }
+
+  .Pfol_Hover_Content {
+    position: absolute;
+    top: -70px;
+    display: flex;
+
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+.BrandWrapper,
+.WebWrapper,
+.MotionWrapper,
+.SocWrapper,
+.ThreeDWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.Pfol_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 0vh;
+  width: 70vw;
+  overflow: hidden;
+  border-radius: 25px;
+
+  transition: all 0.5s ease;
+}
+.Pfol_Container.active {
+  height: 75vh;
+  width: 70vw;
+  margin-top: 10px;
+
+  overflow: hidden;
+}
+.PfolCarouselContainer {
+  /* width: 480px;
+  height: 600px; */
+  width: 25vw;
+  max-width: 500px;
+  min-width: 300px;
+  height: auto;
+  aspect-ratio: 4/5;
+  border-radius: 25px;
+  /* background-color: rgb(64, 66, 184); */
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.PF_Image {
+  height: 100%;
+  width: auto;
+  /* width: auto; */
+}
+
+.EdgeFade {
+  mask-image: linear-gradient(
+    transparent,
+    black 10%,
+    black 80%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+/* LogoTape_____________________________________________________________________*/
+.LogosWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  width: 100vw;
+  height: auto;
+
+  padding: 6vw 0vw 5vw 0vw;
+
+  z-index: 4;
+
+  flex-direction: column;
+}
+
+.LogoTapeTop,
+.LogoTapeBottom {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+
+  height: 2em;
+  width: 150vw;
+
+  font-family: var(--Font-titles);
+  font-size: 2.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.LogoTapeTop {
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Text-color);
+  color: var(--Highlight-color);
+  transform: rotate(3deg) translateX(000px);
+}
+.LogoTapeBottom {
+  justify-content: start;
+  align-items: center;
+  background-color: var(--Highlight-color);
+  color: var(--Text-color);
+  transform: rotate(-2deg) translateY(100px);
+}
+
+.LogoTapeTop img,
+.LogoTapeBottom img {
+  width: 60%;
+  height: auto;
+}
+.LogoTapeVA {
+  margin-top: 0.25em;
+}
+.LogoTapeVA .highlight {
+  color: var(--Background-color);
+}
+
+/* FOOTER_____________________________________________________________________*/
+
+.Section_Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+  border-radius: 30px 30px 0px 0px;
+
+  position: relative;
+  overflow: hidden;
+
+  margin-top: 20vh;
+  padding: 10vh 0vh 20vh 0vh;
+
+  background-color: var(--Highlight-color);
+}
+
+.Section_Footer .highlight {
+  color: var(--Background-color);
+}
+
+.FooterFormBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
+  flex-wrap: wrap;
+  gap: 50px;
+
+  width: 80vw;
+  height: auto;
+}
+
+.KeepInTouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.SocialWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.SocialLogos {
+  height: auto;
+  width: 35px;
+  fill: var(--Text-color);
+  z-index: 1;
+}
+
+.SocialButton {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+
+  background-color: var(--Background-color);
+
+  transition: 0.3s;
+}
+
+.SocialButton:hover {
+  background-color: var(--Text-color);
+  color: var(--Background-color);
+
+  .SocialLogos {
+    fill: var(--Highlight-color);
+  }
+}
+
+.ContactFormWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+}
+input::placeholder {
+  color: var(--Background-color);
+}
+
+.feedback-input {
+  font-family: var(--Font-copy);
+  font-size: 1em;
+
+  color: var(--Background-color);
+  line-height: 1.2em;
+  background-color: transparent;
+  border: 2px solid var(--Background-color);
+  border-radius: 25px;
+
+  padding: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+
+  transition: all 0.3s;
+}
+
+.feedback-input:focus {
+  border: 2px solid var(--Text-color);
+}
+
+textarea {
+  min-height: 150px;
+  max-height: 350px;
+  line-height: 150%;
+  resize: vertical;
+}
+textarea::placeholder {
+  color: var(--Background-color);
+}
+
+[type="submit"] {
+  background: var(--Background-color);
+  border-radius: 2em;
+  border: 0;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+
+  padding: 0.3em 1.5em 0.3em 1.5em;
+  transition: all 0.3s;
+
+  font-family: var(--Font-titles), Arial, sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--Text-color);
+  vertical-align: -0.2em;
+}
+
+[type="submit"]:hover {
+  background: var(--Text-color);
+  color: var(--Highlight-color);
+}
+
+.footerText {
+  display: block;
+  text-align: center;
+
+  font-family: var(--Font-copy);
+  color: var(--Background-color);
+
+  margin-top: 200px;
+
+  width: 80vw;
+}
+
+/* OWL _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_- _-_-  */
+.owl-carousel {
+  cursor: -webkit-grab;
+  cursor: grab;
+  /* cursor: none; */
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: var(--Text-color);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--Highlight-color);
+}
+
+/* xBP TABLET_____________________________________________________________________*/
+/* xBP TABLET_____________________________________________________________________*/
+@media screen and (min-width: 680px) and (max-width: 1023px) {
+  /* @media screen and (min-width: 680px) and (max-width: 1023px) and (pointer: coarse) { */
+  /* :root {
+    --Highlight-color: #87d841;
+  } */
+
+  /* Splash_____________________________________________________________________*/
+
+  .Splash_Video {
+    width: 90vw;
+    aspect-ratio: 4/5;
+    bottom: 5em;
+  }
+
+  .SplashSpacer {
+    margin-top: 15em;
+    width: 90vw;
+    aspect-ratio: 4/5;
+    height: auto;
+  }
+
+  /* Nav_____________________________________________________________________*/
+  .NavItem,
+  .NavButton {
+    display: none;
+  }
+
+  .NavMenu {
+    justify-content: end;
+    width: 10em;
+  }
+
+  .BurgerNavButton {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    z-index: 11;
+  }
+  /* DDBT _____________________________________________________________________*/
+  .DDBText {
+    font-size: 20em;
+  }
+  /* TextScroller_____________________________________________________________________*/
+  .TextScrollerWrapper {
+    padding: 5vw 0vw 5vw 0vw;
+  }
+  .TextScrollerRIGHT,
+  .TextScrollerLEFT {
+    width: unset;
+  }
+
+  /* Info_____________________________________________________________________*/
+  .CopyTitles {
+    font-size: 10em;
+  }
+  .CopyImage {
+    /* background-color: lightgrey; */
+    /* width: 500px; */
+    width: 500px;
+  }
+
+  /* Portfolio_____________________________________________________________________*/
+  .Portfolio_ListItem {
+    width: 80vw;
+  }
+  .Pfol_Container.active {
+    height: 70vh;
+  }
+  .PfolCarouselContainer {
+    width: 500px;
+  }
+
+  .EdgeFade {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  /* LogoTape_____________________________________________________________________*/
+  .LogoTapeTop,
+  .LogoTapeBottom {
+    font-size: 2em;
+    height: 80px;
+  }
+  .LogosWrapper {
+    padding: 6vh 0vh 12vh 0vh;
+  }
+
+  .LogoTapeBottom {
+    transform: rotate(-2deg) translateY(140px);
+  }
+
+  .LogoTapeTop img,
+  .LogoTapeBottom img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Footer_____________________________________________________________________*/
+  .Section_Footer {
+    margin-top: 10vh;
+    .CopyTitles {
+      text-align: center;
+    }
+  }
+
+  .SocialWrapper {
+    justify-content: center;
+    margin-top: 30px;
+  }
+}
+
+/* xBP MOBILE_____________________________________________________________________*/
+/* xBP MOBILE_____________________________________________________________________*/
+@media screen and (max-width: 679px) {
+  /* _Splash____________________________________________________________________*/
+  .Splash_Video {
+    width: 90vw;
+    aspect-ratio: 9/14;
+  }
+  .SplashSpacer {
+    margin-top: 10em;
+    width: 95vw;
+    aspect-ratio: 9/14;
+    height: auto;
+  }
+
+  .Section_Splash {
+    /* margin-bottom: 50px; */
+    overflow: hidden;
+  }
+
+  /* Nav_____________________________________________________________________*/
+  .Navbar {
+    height: 60px;
+  }
+  .NavLogo {
+    font-size: 2em;
+  }
+  .NavLogo span {
+    vertical-align: -5px;
+  }
+
+  .NavItem,
+  .NavButton {
+    display: none;
+  }
+
+  .NavMenu {
+    justify-content: end;
+    width: 10em;
+  }
+  .BurgerNavButton {
+    visibility: visible;
+    display: flex;
+    padding: 0.1em 0.5em;
+    position: absolute;
+    z-index: 11;
+  }
+  /* TitleText_____________________________________________________________________*/
+  .DDBMASK {
+    margin-top: 10px;
+    max-height: 12em;
+    animation: reveal-up-Mobile 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes reveal-up-Mobile {
+    to {
+      height: 0em;
+    }
+  }
+
+  .DDBContainer {
+    height: 10em;
+    animation: slidein-splash 0.25s ease-in;
+    /* animation-delay: 0.5s; */
+  }
+
+  .DDBText {
+    font-size: 10em;
+    animation: scroll-splash 8s linear infinite;
+    animation-delay: 1.1s;
+  }
+  .splashAst {
+    vertical-align: -0.125em;
+  }
+
+  /* ScrollerText_____________________________________________________________________*/
+
+  .TextScrollerWrapper {
+    padding: 5vw 0vw 2vw 0vw;
+  }
+
+  .TextScrollerRIGHT,
+  .TextScrollerLEFT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2em;
+    width: unset;
+
+    font-family: var(--Font-titles), Arial, sans-serif;
+    white-space: nowrap;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .ScrolltextVA {
+    margin-top: 0.2em;
+  }
+  /* Info_____________________________________________________________________*/
+  .CopyImageBlock {
+    margin-bottom: 10vh;
+  }
+  .CopyBlock {
+    width: 75vw;
+  }
+  .CopyTitles {
+    font-size: 5em;
+    padding: 0px 5px;
+    min-width: unset;
+  }
+  .CopyBody {
+    font-size: 1em;
+    padding: 0px 5px;
+  }
+  .CopyBody p {
+    width: 70vw;
+  }
+
+  /* Portfolio_____________________________________________________________________*/
+  .Portfolio_ListItem {
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+    width: 80vw;
+  }
+
+  .Portfolio_ListTitle {
+    font-size: 3em;
+  }
+
+  .ViewProj {
+    font-size: 0.9em;
+    align-items: end;
+    bottom: 0px;
+  }
+
+  .Pfol_Brand_Content,
+  .Pfol_Web_Content,
+  .Pfol_Motion_Content,
+  .Pfol_Social_Content,
+  .Pfol_3D_Content {
+    display: none;
+  }
+
+  .Portfolio_ListItem:hover::before {
+    all: unset;
+  }
+  .Portfolio_ListItem:hover .highlight {
+    color: var(--Highlight-color);
+  }
+  .Portfolio_ListItem:hover .Portfolio_ListTitle {
+    color: var(--Text-color);
+  }
+
+  .Pfol_Container {
+    width: 90vw;
+    margin-top: 0;
+  }
+
+  .Pfol_Container.active {
+    height: 55vh;
+    width: 90vw;
+    margin-top: 0;
+  }
+
+  .PfolCarouselContainer {
+    /* width: 85vw;
+    height: 55vh; */
+
+    width: 75vw;
+    height: auto;
+    aspect-ratio: 4/5;
+  }
+
+  .EdgeFade {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  /* LogoTape_____________________________________________________________________*/
+  .LogoTapeTop,
+  .LogoTapeBottom {
+    font-size: 1em;
+    width: 200vw;
+    height: 3em;
+    white-space-collapse: preserve-breaks;
+  }
+  .LogosWrapper {
+    padding: 6vh 0vh 8vh 0vh;
+  }
+  .LogoTapeBottom {
+    transform: rotate(-2deg) translateY(80px);
+  }
+  .LogoTapeVA {
+    width: 200px;
+    margin-top: 0em;
+    line-height: 1em;
+
+    display: flex;
+  }
+
+  .LogoTapeTop img,
+  .LogoTapeBottom img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Footer_____________________________________________________________________*/
+  .Section_Footer {
+    margin-top: 10vh;
+    padding: 10vh 0vh 10vh 0vh;
+  }
+  .Section_Footer .CopyTitles {
+    text-align: center;
+  }
+
+  .SocialWrapper {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  form {
+    width: 80vw;
+  }
+
+  .footerText {
+    margin-top: 100px;
+  }
+
+  /* OWL_____________________________________________________________________*/
+  .owl-carousel .owl-item img {
+    width: auto;
+  }
+}
+
+.customCursor01 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--Highlight-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: opacity 0.1s;
+  cursor: none;
+
+  font-family: var(--Font-Media);
+  color: var(--Text-color);
+  font-size: 22px;
+
+  span {
+    font-family: arial black;
+    font-weight: bold;
+  }
+}
+
+.customCursor01.Show {
+  opacity: 1;
+}
