@@ -1307,8 +1307,8 @@ textarea::placeholder {
   .DDBMASK {
     margin-top: 10px;
     max-height: 12em;
-    animation: reveal-up-Mobile 1s ease forwards;
-    animation-delay: 0.5s;
+    /* animation: reveal-up-Mobile 1s ease forwards; */
+    /* animation-delay: 0.5s; */
   }
 
   @keyframes reveal-up-Mobile {
