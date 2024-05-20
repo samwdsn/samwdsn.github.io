@@ -17,35 +17,6 @@ function toggleActive(element) {
   element.classList.toggle("active");
 }
 
-// SplashAnimations
-// function runAnimations() {
-//   const timelineSplash = gsap.timeline();
-
-//   timelineSplash
-//     .from(".LoadingBar", { width: vw(0) })
-//     .from(".LoadingScreen", { opacity: 1, display: "flex", duration: 0.5 })
-//     .to(".Navbar", { opacity: 1, width: vw(95), duration: 1 })
-//     .to(".DDBMASK", { height: 0, delay: 0.25, duration: 1 }, "<")
-//     .from(".DDBContainer", { x: vw(15), delay: 0.01, duration: 1 }, "<")
-//     .to(
-//       ".DDBText",
-//       {
-//         x: "-=100%",
-//         duration: 10,
-//         ease: "none",
-//         repeat: -1,
-//         delay: 0.5,
-//       },
-//       "<"
-//     )
-//     .from(".Splash_Video", { y: 150, delay: -0.4, duration: 1 }, "<")
-//     .to(".Splash_Video", { opacity: 1, delay: 0.0, duration: 1 }, "<");
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   runAnimations();
-// });
-
 function runAnimations() {
   const timelineSplash = gsap.timeline();
 
@@ -248,37 +219,6 @@ gsap.to(".TextScrollerWrapperxx", {
   ease: "none",
   y: -150,
 });
-
-// if (window.matchMedia("(min-width: 680px)").matches) {
-//   gsap.to(".Splash_Video", {
-//     scrollTrigger: {
-//       trigger: ".Section_Splash",
-//       start: "top top",
-//       endTrigger: ".Splash_Video",
-//       end: "top 40%",
-//       scrub: 0.5,
-
-//       // markers: true,
-//     },
-//     ease: "none",
-//     y: -150,
-//   });
-// } else {
-//   gsap.to(".Splash_Video", {
-//     scrollTrigger: {
-//       trigger: ".Section_Splash",
-//       start: "top top",
-//       endTrigger: ".Splash_Video",
-//       end: "top 20%",
-//       scrub: 0.5,
-
-//       // markers: true,
-//     },
-//     ease: "none",
-//     y: -70,
-//   });
-// }
-
 let isMobileView = window.innerWidth <= 1024;
 
 function updateVideoSourceIfNeeded() {
@@ -605,3 +545,41 @@ hoverContainers.forEach((hoverContainer) => {
 window.addEventListener("mousemove", (event) => {
   updateCursorPosition(event);
 });
+
+// Wist
+// $(document).ready(function () {
+//   var $carousel = $("#carousel");
+
+//   $carousel.owlCarousel({
+//     items: 1,
+//     navigation: true,
+//     pagination: true,
+//     // Add any other options you need
+//   });
+
+//   // Track dragging state
+//   var isDragging = false;
+
+//   // Disable pointer events on iframe during drag start
+//   $carousel.on("drag.owl.carousel", function (e) {
+//     isDragging = true;
+//     $("#wistia_embed").css("pointer-events", "none");
+//   });
+
+//   // Re-enable pointer events on iframe after drag end
+//   $carousel.on("dragged.owl.carousel", function (e) {
+//     if (isDragging) {
+//       $("#wistia_embed").css("pointer-events", "auto");
+//       isDragging = false;
+//     }
+//   });
+
+//   // Ensure the iframe is muted when ready
+//   window._wq = window._wq || [];
+//   _wq.push({
+//     id: "hpa4u1qk99",
+//     onReady: function (video) {
+//       video.mute();
+//     },
+//   });
+// });

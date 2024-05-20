@@ -151,6 +151,17 @@ button {
 }
 
 /* SplashVideo_____________________________________________________________________*/
+.DesktopVideo {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.MobileVideo {
+  width: 100%;
+  height: auto;
+  display: none;
+}
 
 .Splash_Video {
   display: flex;
@@ -176,7 +187,7 @@ button {
   /* animation: VideoLoad 1s ease-in-out 0.5s forwards; */
 }
 
-.Splash_Video video {
+.Splash_Video_video {
   width: 100%;
   height: auto;
   z-index: 2;
@@ -1153,6 +1164,14 @@ textarea::placeholder {
 
   /* Splash_____________________________________________________________________*/
 
+  .DesktopVideo {
+    display: none;
+  }
+
+  .MobileVideo {
+    display: flex;
+  }
+
   .Splash_Video {
     width: 90vw;
     aspect-ratio: 4/5;
@@ -1260,6 +1279,14 @@ textarea::placeholder {
 /* xBP MOBILE_____________________________________________________________________*/
 @media screen and (max-width: 679px) {
   /* _Splash____________________________________________________________________*/
+  .DesktopVideo {
+    display: none;
+  }
+
+  .MobileVideo {
+    display: flex;
+  }
+
   .Splash_Video {
     width: 90vw;
     aspect-ratio: 9/14;

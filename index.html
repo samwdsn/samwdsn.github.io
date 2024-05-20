@@ -21,8 +21,23 @@
     <title>Shwalky Design | Home</title>
     <link rel="icon" href="Image/ShwalkyFAV.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
 
     <link
       rel="preload"
@@ -64,21 +79,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
 
   <body>
@@ -140,19 +140,50 @@
         </div>
       </div>
       <div class="Splash_Video">
-        <video id="SplashVideo" muted loop>
-          <source
-            id="videoSource"
-            src="Video/SWD_Wide-c.mp4"
-            type="video/mp4"
-            media="(min-width: 1024px)"
-          />
-          <source
-            src="Video/SWD_Mobile-c.mp4"
-            type="video/mp4"
-            media="(max-width: 1023px)"
-          />
-        </video>
+        <div class="DesktopVideo">
+          <script
+            src="https://fast.wistia.com/embed/medias/9s5opbn17p.jsonp"
+            async
+          ></script>
+          <script
+            src="https://fast.wistia.com/assets/external/E-v1.js"
+            async
+          ></script>
+
+          <div
+            class="wistia_responsive_wrapper Splash_Video_video"
+            style="width: 100%"
+          >
+            <div
+              class="wistia_embed wistia_async_9s5opbn17p seo=false videoFoam=true"
+              style="height: 100%; position: relative; width: 100%"
+            >
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="MobileVideo">
+          <script
+            src="https://fast.wistia.com/embed/medias/o3lmp98aj2.jsonp"
+            async
+          ></script>
+          <script
+            src="https://fast.wistia.com/assets/external/E-v1.js"
+            async
+          ></script>
+
+          <div
+            class="wistia_responsive_wrapper Splash_Video_video"
+            style="width: 100%"
+          >
+            <div
+              class="wistia_embed wistia_async_o3lmp98aj2 seo=false videoFoam=true"
+              style="height: 100%; position: relative; width: 100%"
+            >
+              &nbsp;
+            </div>
+          </div>
+        </div>
 
         <div class="loader"></div>
       </div>
@@ -235,7 +266,12 @@
         </div>
 
         <div class="Pfol_Brand_Content Pfol_Hover_Content">
-          <img class="PF_Image" src="Image/Branding.jpg" alt="BrandCover" />
+          <img
+            class="PF_Image"
+            src="Image/Branding.jpg"
+            alt="BrandCover"
+            loading="lazy"
+          />
         </div>
         <div class="Pfol_Container">
           <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
@@ -244,6 +280,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_Manuka_01.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -252,6 +289,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_Manuka_02.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -260,6 +298,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_Optimal_01.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -268,6 +307,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_Optimal_02.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -276,6 +316,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_MuscFood_01.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -284,6 +325,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_MuscFood_02.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -292,6 +334,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_FiveTwenty_01.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -300,6 +343,7 @@
                 class="PF_Image"
                 src="Image/Branding/Brand_FiveTwenty_02.jpg"
                 alt="BrandPortfolioImage"
+                loading="lazy"
               />
             </div>
           </div>
@@ -316,7 +360,12 @@
           </div>
         </div>
         <div class="Pfol_Web_Content Pfol_Hover_Content">
-          <img class="PF_Image" src="Image/Web.jpg" alt="WebCover" />
+          <img
+            class="PF_Image"
+            src="Image/Web.jpg"
+            alt="WebCover"
+            loading="lazy"
+          />
         </div>
         <div class="Pfol_Container">
           <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
@@ -325,6 +374,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_Optimal_01.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -333,6 +383,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_Optimal_02.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -341,6 +392,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_KCC_01.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -349,6 +401,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_KCC_02.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -357,6 +410,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_Engagehub_01.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -365,6 +419,7 @@
                 class="PF_Image"
                 src="Image/Web/Web_Engagehub_02.jpg"
                 alt="WebPortfolioImage"
+                loading="lazy"
               />
             </div>
           </div>
@@ -381,83 +436,336 @@
           </div>
         </div>
         <div class="Pfol_Motion_Content Pfol_Hover_Content">
-          <video autoplay muted playsinline loop class="PF_Image">
+          <video
+            autoplay
+            muted
+            playsinline
+            loop
+            class="PF_Image"
+            loading="lazy"
+          >
             <source src="Image/Motion_02.mp4" type="video/mp4" />
           </video>
         </div>
         <div class="Pfol_Container">
           <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_VOGGT.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/m34d2a37zs.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source
-                  src="Image/Motion/01_Voggt_Reel_1.mp4"
-                  type="video/mp4"
-                />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_m34d2a37zs seo=false videoFoam=true muted=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/m34d2a37zs/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_PJ.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/8315pbv0fe.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source src="Image/Motion/03_PJ_1.mp4" type="video/mp4" />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_8315pbv0fe seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/8315pbv0fe/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_BM.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/ibeb8np3ct.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source src="Image/Motion/04_BlueMoon_1.mp4" type="video/mp4" />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_ibeb8np3ct seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/ibeb8np3ct/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_AB.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/orgp20iuap.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source src="Image/Motion/05_AB_1.mp4" type="video/mp4" />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_orgp20iuap seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/orgp20iuap/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_SOC.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/hpa4u1qk99.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source src="Image/Motion/02_SOC_1.mp4" type="video/mp4" />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_hpa4u1qk99 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/hpa4u1qk99/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="PfolCarouselContainer">
-              <video
-                controls
-                playsinline
-                muted
-                poster="Image/Motion/Cover_ACCT.jpg"
-                class="PF_Image"
+              <script
+                src="https://fast.wistia.com/embed/medias/qi9yujub08.jsonp"
+                async
+              ></script>
+              <script
+                src="https://fast.wistia.com/assets/external/E-v1.js"
+                async
+              ></script>
+
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
               >
-                <source
-                  src="Image/Motion/06_Accointing_1.mp4"
-                  type="video/mp4"
-                />
-              </video>
+                <div
+                  class="wistia_embed wistia_async_qi9yujub08 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/qi9yujub08/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -473,7 +781,12 @@
           </div>
         </div>
         <div class="Pfol_Social_Content Pfol_Hover_Content">
-          <img class="PF_Image" src="Image/Social.jpg" alt="SocialCover" />
+          <img
+            class="PF_Image"
+            src="Image/Social.jpg"
+            alt="SocialCover"
+            loading="lazy"
+          />
         </div>
         <div class="Pfol_Container">
           <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
@@ -482,6 +795,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_BlueMoon_01.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -490,6 +804,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_AceFace_01.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -498,6 +813,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_Sesire_01.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -506,6 +822,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_Accointing_01.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -514,6 +831,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_Blanx_01.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -522,6 +840,7 @@
                 class="PF_Image"
                 src="Image/Social/Social_SocialsMIX.jpg"
                 alt="SocialPortfolioImage"
+                loading="lazy"
               />
             </div>
           </div>
@@ -538,7 +857,12 @@
           </div>
         </div>
         <div class="Pfol_3D_Content Pfol_Hover_Content">
-          <img class="PF_Image" src="Image/3D.jpg" alt="3DCover" />
+          <img
+            class="PF_Image"
+            src="Image/3D.jpg"
+            alt="3DCover"
+            loading="lazy"
+          />
         </div>
         <div class="Pfol_Container">
           <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
@@ -547,6 +871,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Aceface_01.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -555,6 +880,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Aceface_02.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -563,6 +889,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_CitrusTwist_01.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -571,6 +898,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_CitrusTwist_02.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -579,6 +907,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Blanx_01.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -587,6 +916,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Blanx_02.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -595,6 +925,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Wazz_01.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -603,6 +934,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_Wazz_02.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -611,6 +943,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_SHARK_01.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
 
@@ -619,6 +952,7 @@
                 class="PF_Image"
                 src="Image/3D/3D_SHARK_02.jpg"
                 alt="3DPortfolioImage"
+                loading="lazy"
               />
             </div>
           </div>
