@@ -672,6 +672,7 @@ button {
   width: 30vw;
   max-width: 500px;
   min-width: 300px;
+
   height: auto;
   aspect-ratio: 4/5;
   border-radius: 25px;
@@ -933,8 +934,6 @@ button {
 .LogoTapeTop,
 .LogoTapeBottom {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 
   height: 2em;
   width: 150vw;
@@ -1401,6 +1400,12 @@ textarea::placeholder {
   }
   .CopyBody p {
     width: 70vw;
+  }
+
+  .CopyImage {
+    width: 75vw;
+    height: auto;
+    aspect-ratio: 4/5;
   }
 
   /* Portfolio_____________________________________________________________________*/
