@@ -1,1108 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E4VF5Z8T3R"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-E4VF5Z8T3R");
-    </script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4VF5Z8T3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shwalky Design | Home</title>
-    <link rel="icon" href="Image/ShwalkyFAV.png" type="image/x-icon" />
+    gtag("config", "G-E4VF5Z8T3R");
+  </script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shwalky Design | Home</title>
+  <link rel="icon" href="Image/ShwalkyFAV.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="main.css" />
-    <script src="main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link
-      rel="preload"
-      href="Font/ObviouslyNarrow-Black.otf"
-      as="font"
-      type="font/otf"
-    />
-    <link
-      rel="preload"
-      href="Font/ObviouslyNarrow-BlackItalic.otf"
-      as="font"
-      type="font/otf"
-    />
-    <link
-      rel="preload"
-      href="Font/ObviouslyNarrow-SemiBold.otf"
-      as="font"
-      type="font/otf"
-    />
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
 
-    <!-- LENIS -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+  <link rel="preload" href="Font/ObviouslyNarrow-Black.otf" as="font" type="font/otf" />
+  <link rel="preload" href="Font/ObviouslyNarrow-BlackItalic.otf" as="font" type="font/otf" />
+  <link rel="preload" href="Font/ObviouslyNarrow-SemiBold.otf" as="font" type="font/otf" />
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+  <!-- LENIS -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 
-    <!-- OWL -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- OWL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Wistia -->
-    <script
-      src="https://fast.wistia.com/assets/external/E-v1.js"
-      async
-    ></script>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <body>
-    <section id="Splash" class="Section_Splash">
-      <div class="LoadingScreen">
-        <div class="LoadingBar"></div>
-      </div>
-      <div class="NavPlaceholder">
-        <div id="Navbar" class="Navbar">
-          <div class="NavLogo">
-            <p><span>SHWALKY</span></p>
-          </div>
-          <div class="NavMenu">
-            <button onclick="refreshPage()" class="NavItem">Home</button>
-            <button onclick="scrollToInfo()" class="NavItem">Info</button>
-            <button onclick="scrollToWork()" class="NavItem">Work</button>
-            <button onclick="scrollToContact()" class="NavButton">
-              <span>Let's Talk!</span>
-            </button>
-            <button
-              onclick="ToggleBurgerMenu()"
-              class="NavButton BurgerNavButton"
-            >
-              <div class="Burger">
-                <div class="BunTop"></div>
-                <div class="PattyMid"></div>
-                <div class="BunBottom"></div>
-              </div>
-            </button>
-          </div>
+  <!-- Wistia -->
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+</head>
+
+<body>
+  <section id="Splash" class="Section_Splash">
+    <div class="LoadingScreen">
+      <div class="LoadingBar"></div>
+    </div>
+    <div class="NavPlaceholder">
+      <div id="Navbar" class="Navbar">
+        <div class="NavLogo">
+          <p><span>SHWALKY</span></p>
         </div>
-      </div>
-
-      <div class="BurgerMenu">
-        <button onclick="refreshPage()" class="BurgerItem">
-          <span>Home</span>
-        </button>
-        <button onclick="scrollToInfo()" class="BurgerItem">
-          <span>Info</span>
-        </button>
-        <button onclick="scrollToWork()" class="BurgerItem">
-          <span>Work</span>
-        </button>
-        <button onclick="scrollToContact()" class="BurgerMenuButton">
-          <span>Let's Talk!</span>
-        </button>
-      </div>
-      <div class="DDBPos">
-        <div class="DDBContainer L1">
-          <div class="DDBMASK"></div>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
-          <p class="DDBText">
-            Design done <span class="DDBTextHighlight">Better</span
-            ><span class="splashAst">*</span>
-          </p>
+        <div class="NavMenu">
+          <button onclick="refreshPage()" class="NavItem">Home</button>
+          <button onclick="scrollToInfo()" class="NavItem">Info</button>
+          <button onclick="scrollToWork()" class="NavItem">Work</button>
+          <button onclick="scrollToContact()" class="NavButton">
+            <span>Let's Talk!</span>
+          </button>
+          <button onclick="ToggleBurgerMenu()" class="NavButton BurgerNavButton">
+            <div class="Burger">
+              <div class="BunTop"></div>
+              <div class="PattyMid"></div>
+              <div class="BunBottom"></div>
+            </div>
+          </button>
         </div>
-      </div>
-      <div class="Splash_Video">
-        <div class="DesktopVideo">
-          <script
-            src="https://fast.wistia.com/embed/medias/9s5opbn17p.jsonp"
-            async
-          ></script>
-
-          <div
-            class="wistia_responsive_wrapper Splash_Video_video"
-            style="width: 100%"
-          >
-            <div
-              class="wistia_embed wistia_async_9s5opbn17p seo=false videoFoam=true"
-              style="height: 100%; position: relative; width: 100%"
-            >
-              &nbsp;
-            </div>
-          </div>
-        </div>
-        <div class="MobileVideo">
-          <script
-            src="https://fast.wistia.com/embed/medias/o3lmp98aj2.jsonp"
-            async
-          ></script>
-
-          <div
-            class="wistia_responsive_wrapper Splash_Video_video"
-            style="width: 100%"
-          >
-            <div
-              class="wistia_embed wistia_async_o3lmp98aj2 seo=false videoFoam=true"
-              style="height: 100%; position: relative; width: 100%"
-            >
-              &nbsp;
-            </div>
-          </div>
-        </div>
-
-        <div class="loader"></div>
-      </div>
-      <div class="TextScrollerWrapper">
-        <p class="TextScrollerLEFT">
-          <span class="ScrolltextVA">
-            <span class="highlight">Graphic</span>
-            <span class="highlight">Design</span> • Branding • Motion
-            <span class="highlight">Graphics</span> • 3D Modelling &amp;
-            Visualisation • <span class="highlight">Creative</span> • Video
-            Editing • Web <span class="highlight">Design</span> • Ui/Ux •
-            <span class="highlight">Graphic</span>
-            <span class="highlight">Design</span> • Branding • Motion
-          </span>
-        </p>
-
-        <p class="TextScrollerRIGHT">
-          <span class="ScrolltextVA">
-            <span class="highlight">Creative</span> • Video Editing • Web
-            <span class="highlight">Design</span> • Ui/Ux •
-            <span class="highlight">Graphic</span>
-            <span class="highlight">Design</span> • Branding • Motion
-            <span class="highlight">Graphics</span> • 3D Modelling &amp;
-            Visualisation • <span class="highlight">Creative</span> • Video
-            Editing • Web
-            <span class="highlight">Design</span>
-          </span>
-        </p>
-      </div>
-    </section>
-
-    <section id="Info" class="Section_Copy">
-      <div class="CopyImageBlock">
-        <div class="CopyBlock CBLeft">
-          <div class="CopyTitles">
-            <p class="txtload_Info1">Keep it</p>
-            <p class="txtload_Info1"><span class="highlight">fresh!</span></p>
-          </div>
-          <div class="CopyBody">
-            <p class="txtload_Info1">
-              Elevate your brand with a fresh visual identity or captivate your
-              audience with on-trend & engaging, creative designs.
-            </p>
-          </div>
-        </div>
-        <div class="CopyImage IMGLOAD">
-          <img
-            src="Image/Fresh.jpg"
-            width="400"
-            height="500"
-            alt="FreshImage"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div class="CopyImageBlock CIB_R">
-        <div class="CopyBlock CBRight">
-          <div class="CopyTitles">
-            <p class="txtload_Info2">Keep it</p>
-            <p class="txtload_Info2"><span class="highlight">moving!</span></p>
-          </div>
-          <div class="CopyBody">
-            <p class="txtload_Info2">
-              Design doesn’t have to sit still to captivate a crowd, uplift your
-              content with scroll stopping motion design.
-            </p>
-          </div>
-        </div>
-        <div class="CopyImage IMGLOAD">
-          <video
-            autoplay
-            muted
-            playsinline
-            loop
-            poster="Image/KeepItMotion_IMG.jpg"
-            loading="lazy"
-            width="400"
-            height="500"
-          >
-            <source src="Image/Motion.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-    </section>
-    <section ID="Portfolio" class="Section_PortfolioList">
-      <div class="BrandWrapper">
-        <div class="PLI_Brand" onclick="PLI_Click(this)">
-          <div class="Portfolio_ListItem">
-            <p class="Portfolio_ListTitle"><span>Brand</span></p>
-            <p class="ViewProj">
-              View<br /><span class="highlight">Projects</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="Pfol_Brand_Content Pfol_Hover_Content">
-          <img
-            class="PF_Image"
-            src="Image/Branding.jpg"
-            width="400"
-            height="500"
-            alt="BrandCover"
-            loading="lazy"
-          />
-        </div>
-        <div class="Pfol_Container">
-          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_Manuka_01.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_Manuka_02.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_Optimal_01.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_Optimal_02.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_MuscFood_01.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_MuscFood_02.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_FiveTwenty_01.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Branding/Brand_FiveTwenty_02.jpg"
-                width="400"
-                height="500"
-                alt="BrandPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="WebWrapper">
-        <div class="PLI_Web" onclick="PLI_Click(this);">
-          <div class="Portfolio_ListItem">
-            <p class="Portfolio_ListTitle"><span>Web</span></p>
-            <p class="ViewProj">
-              View<br /><span class="highlight">Projects</span>
-            </p>
-          </div>
-        </div>
-        <div class="Pfol_Web_Content Pfol_Hover_Content">
-          <img
-            class="PF_Image"
-            src="Image/Web.jpg"
-            width="400"
-            height="500"
-            alt="WebCover"
-            loading="lazy"
-          />
-        </div>
-        <div class="Pfol_Container">
-          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_Optimal_01.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_Optimal_02.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_KCC_01.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_KCC_02.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_Engagehub_01.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Web/Web_Engagehub_02.jpg"
-                width="400"
-                height="500"
-                alt="WebPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="MotionWrapper">
-        <div class="PLI_Motion" onclick="PLI_Click(this)">
-          <div class="Portfolio_ListItem">
-            <p class="Portfolio_ListTitle"><span>Motion</span></p>
-            <p class="ViewProj">
-              View<br /><span class="highlight">Projects</span>
-            </p>
-          </div>
-        </div>
-        <div class="Pfol_Motion_Content Pfol_Hover_Content">
-          <video
-            autoplay
-            muted
-            playsinline
-            loop
-            class="PF_Image"
-            loading="lazy"
-          >
-            <source src="Image/Motion_02.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="Pfol_Container">
-          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/m34d2a37zs.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_m34d2a37zs seo=false videoFoam=true muted=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/m34d2a37zs/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/8315pbv0fe.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_8315pbv0fe seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/8315pbv0fe/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/ibeb8np3ct.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_ibeb8np3ct seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/ibeb8np3ct/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/orgp20iuap.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_orgp20iuap seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/orgp20iuap/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/hpa4u1qk99.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_hpa4u1qk99 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/hpa4u1qk99/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="PfolCarouselContainer">
-              <script
-                src="https://fast.wistia.com/embed/medias/qi9yujub08.jsonp"
-                async
-              ></script>
-
-              <div
-                class="wistia_responsive_wrapper"
-                style="
-                  height: 100%;
-                  left: 0;
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                "
-              >
-                <div
-                  class="wistia_embed wistia_async_qi9yujub08 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
-                  style="height: 100%; position: relative; width: 100%"
-                >
-                  <div
-                    class="wistia_swatch"
-                    style="
-                      height: 100%;
-                      left: 0;
-                      opacity: 0;
-                      overflow: hidden;
-                      position: absolute;
-                      top: 0;
-                      transition: opacity 200ms;
-                      width: 100%;
-                    "
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/qi9yujub08/swatch"
-                      style="
-                        filter: blur(5px);
-                        height: 100%;
-                        object-fit: contain;
-                        width: 100%;
-                      "
-                      alt=""
-                      aria-hidden="true"
-                      onload="this.parentNode.style.opacity=1;"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="SocWrapper">
-        <div class="PLI_Social" onclick="PLI_Click(this)">
-          <div class="Portfolio_ListItem">
-            <p class="Portfolio_ListTitle"><span>Social</span></p>
-            <p class="ViewProj">
-              View<br /><span class="highlight">Projects</span>
-            </p>
-          </div>
-        </div>
-        <div class="Pfol_Social_Content Pfol_Hover_Content">
-          <img
-            class="PF_Image"
-            src="Image/Social.jpg"
-            width="400"
-            height="500"
-            alt="SocialCover"
-            loading="lazy"
-          />
-        </div>
-        <div class="Pfol_Container">
-          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_BlueMoon_01.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_AceFace_01.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_Sesire_01.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_Accointing_01.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_Blanx_01.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/Social/Social_SocialsMIX.jpg"
-                width="400"
-                height="500"
-                alt="SocialPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ThreeDWrapper">
-        <div class="PLI_3D" onclick="PLI_Click(this)">
-          <div class="Portfolio_ListItem">
-            <p class="Portfolio_ListTitle"><span>3D</span></p>
-            <p class="ViewProj">
-              View<br /><span class="highlight">Projects</span>
-            </p>
-          </div>
-        </div>
-        <div class="Pfol_3D_Content Pfol_Hover_Content">
-          <img
-            class="PF_Image"
-            src="Image/3D.jpg"
-            width="400"
-            height="500"
-            alt="3DCover"
-            loading="lazy"
-          />
-        </div>
-        <div class="Pfol_Container">
-          <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Aceface_01.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Aceface_02.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_CitrusTwist_01.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_CitrusTwist_02.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Blanx_01.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Blanx_02.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Wazz_01.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_Wazz_02.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_SHARK_01.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="PfolCarouselContainer">
-              <img
-                class="PF_Image"
-                src="Image/3D/3D_SHARK_02.jpg"
-                width="400"
-                height="500"
-                alt="3DPortfolioImage"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="LogosWrapper">
-      <div class="LogoTapeBottom">
-        <img src="Image/ClientLogoTape.png" alt="Logos" />
-        <img src="Image/ClientLogoTape.png" alt="Logos" />
-      </div>
-      <div class="LogoTapeTop">
-        <img src="Image/ClientLogoTape.png" alt="Logos" />
-        <p class="LogoTapeVA">
-          <span
-            >You may have also
-            <span class="highlight">seen my work</span> with:</span
-          >
-        </p>
-        <img src="Image/ClientLogoTape.png" alt="Logos" />
       </div>
     </div>
 
-    <section ID="Footer" class="Section_Footer">
-      <div class="FooterFormBlock">
-        <div class="KeepInTouch">
-          <div class="CopyTitles">
-            <p class="txtload_Footer1">Keep in</p>
-            <p class="txtload_Footer1"><span class="highlight">touch!</span></p>
-          </div>
-          <div class="SocialWrapper">
-            <a href="https://instagram.com/samwdesign" target="_blank">
-              <div class="SocialButton">
-                <svg class="SocialLogos" viewBox="0 0 85 85">
-                  <use xlink:href="SVG/InstagramLogo.svg#Layer_2"></use>
-                </svg>
-              </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/samwdesign/" target="_blank">
-              <div class="SocialButton">
-                <svg class="SocialLogos" viewBox="0 0 80 79.78">
-                  <use xlink:href="SVG/LinkedInLogo.svg#Layer_2"></use>
-                </svg>
-              </div>
-            </a>
-
-            <a href="mailto:samwdsn@gmail.com" target="_blank">
-              <div class="SocialButton">
-                <svg class="SocialLogos" viewBox="0 0 80 79.78">
-                  <use xlink:href="SVG/Email.svg#Layer_2"></use>
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="ContactFormWrapper">
-          <form
-            target="_blank"
-            action="https://formsubmit.co/samwdsn@gmail.com"
-            method="POST"
-          >
-            <input
-              name="name"
-              type="text"
-              class="feedback-input"
-              placeholder="Name"
-              required
-            />
-            <input
-              name="email"
-              type="text"
-              class="feedback-input"
-              placeholder="Email"
-              required
-            />
-            <textarea
-              name="text"
-              class="feedback-input"
-              placeholder="Message"
-            ></textarea>
-            <input type="submit" value="SUBMIT" required />
-          </form>
-        </div>
-      </div>
-      <div class="footerText">
-        <p>
-          © Sam Walker • Freelance Creative Designer • Manchester, UK •
-          #DesignDoneBetter • 2024
+    <div class="BurgerMenu">
+      <button onclick="refreshPage()" class="BurgerItem">
+        <span>Home</span>
+      </button>
+      <button onclick="scrollToInfo()" class="BurgerItem">
+        <span>Info</span>
+      </button>
+      <button onclick="scrollToWork()" class="BurgerItem">
+        <span>Work</span>
+      </button>
+      <button onclick="scrollToContact()" class="BurgerMenuButton">
+        <span>Let's Talk!</span>
+      </button>
+    </div>
+    <div class="DDBPos">
+      <div class="DDBContainer L1">
+        <div class="DDBMASK"></div>
+        <p class="DDBText">
+          Design done <span class="DDBTextHighlight">Better</span><span class="splashAst">*</span>
+        </p>
+        <p class="DDBText">
+          Design done <span class="DDBTextHighlight">Better</span><span class="splashAst">*</span>
         </p>
       </div>
-      <div class="customCursor01"></div>
-    </section>
-  </body>
+    </div>
+    <div class="Splash_Video">
+      <div class="DesktopVideo">
+        <script src="https://fast.wistia.com/embed/medias/9s5opbn17p.jsonp" async></script>
+
+        <div class="wistia_responsive_wrapper Splash_Video_video" style="width: 100%">
+          <div class="wistia_embed wistia_async_9s5opbn17p seo=false videoFoam=true"
+            style="height: 100%; position: relative; width: 100%">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="MobileVideo">
+        <script src="https://fast.wistia.com/embed/medias/o3lmp98aj2.jsonp" async></script>
+
+        <div class="wistia_responsive_wrapper Splash_Video_video" style="width: 100%">
+          <div class="wistia_embed wistia_async_o3lmp98aj2 seo=false videoFoam=true"
+            style="height: 100%; position: relative; width: 100%">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+
+      <div class="loader"></div>
+    </div>
+    <div class="TextScrollerWrapper">
+      <p class="TextScrollerLEFT">
+        <span class="ScrolltextVA">
+          <span class="highlight">Graphic</span>
+          <span class="highlight">Design</span> • Branding • Motion
+          <span class="highlight">Graphics</span> • 3D Modelling &amp;
+          Visualisation • <span class="highlight">Creative</span> • Video
+          Editing • Web <span class="highlight">Design</span> • Ui/Ux •
+          <span class="highlight">Graphic</span>
+          <span class="highlight">Design</span> • Branding • Motion
+        </span>
+      </p>
+
+      <p class="TextScrollerRIGHT">
+        <span class="ScrolltextVA">
+          <span class="highlight">Creative</span> • Video Editing • Web
+          <span class="highlight">Design</span> • Ui/Ux •
+          <span class="highlight">Graphic</span>
+          <span class="highlight">Design</span> • Branding • Motion
+          <span class="highlight">Graphics</span> • 3D Modelling &amp;
+          Visualisation • <span class="highlight">Creative</span> • Video
+          Editing • Web
+          <span class="highlight">Design</span>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section id="Info" class="Section_Copy">
+    <div class="CopyImageBlock">
+      <div class="CopyBlock CBLeft">
+        <div class="CopyTitles">
+          <p class="txtload_Info1">Keep it</p>
+          <p class="txtload_Info1"><span class="highlight">fresh!</span></p>
+        </div>
+        <div class="CopyBody">
+          <p class="txtload_Info1">
+            Elevate your brand with a fresh visual identity or captivate your
+            audience with on-trend & engaging, creative designs.
+          </p>
+        </div>
+      </div>
+      <div class="CopyImage IMGLOAD">
+        <img src="Image/Fresh.jpg" width="400" height="500" alt="FreshImage" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="CopyImageBlock CIB_R">
+      <div class="CopyBlock CBRight">
+        <div class="CopyTitles">
+          <p class="txtload_Info2">Keep it</p>
+          <p class="txtload_Info2"><span class="highlight">moving!</span></p>
+        </div>
+        <div class="CopyBody">
+          <p class="txtload_Info2">
+            Design doesn’t have to sit still to captivate a crowd, uplift your
+            content with scroll stopping motion design.
+          </p>
+        </div>
+      </div>
+      <div class="CopyImage IMGLOAD">
+        <video autoplay muted playsinline loop poster="Image/KeepItMotion_IMG.jpg" loading="lazy" width="400"
+          height="500">
+          <source src="Image/Motion.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+  <section ID="Portfolio" class="Section_PortfolioList">
+    <div class="BrandWrapper">
+      <div class="PLI_Brand" onclick="PLI_Click(this)">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle"><span>Brand</span></p>
+          <p class="ViewProj">
+            View<br /><span class="highlight">Projects</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="Pfol_Brand_Content Pfol_Hover_Content">
+        <img class="PF_Image" src="Image/Branding.jpg" width="400" height="500" alt="BrandCover" loading="lazy" />
+      </div>
+      <div class="Pfol_Container">
+        <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Branding_Sizzle_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Branding_Sizzle_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Branding_Sizzle_03.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Manuka_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Manuka_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Chemind_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Chemind_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_MuscFood_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_MuscFood_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Optimal_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_Optimal_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_FiveTwenty_01.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Branding/Brand_FiveTwenty_02.jpg" width="400" height="500"
+              alt="BrandPortfolioImage" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="WebWrapper">
+      <div class="PLI_Web" onclick="PLI_Click(this);">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle"><span>Web</span></p>
+          <p class="ViewProj">
+            View<br /><span class="highlight">Projects</span>
+          </p>
+        </div>
+      </div>
+      <div class="Pfol_Web_Content Pfol_Hover_Content">
+        <img class="PF_Image" src="Image/Web.jpg" width="400" height="500" alt="WebCover" loading="lazy" />
+      </div>
+      <div class="Pfol_Container">
+        <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Chemind_01.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Chemind_02.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Optimal_01.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Optimal_02.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_KCC_01.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_KCC_02.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Engagehub_01.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Web/Web_Engagehub_02.jpg" width="400" height="500" alt="WebPortfolioImage"
+              loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="MotionWrapper">
+      <div class="PLI_Motion" onclick="PLI_Click(this)">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle"><span>Motion</span></p>
+          <p class="ViewProj">
+            View<br /><span class="highlight">Projects</span>
+          </p>
+        </div>
+      </div>
+      <div class="Pfol_Motion_Content Pfol_Hover_Content">
+        <video autoplay muted playsinline loop class="PF_Image" loading="lazy">
+          <source src="Image/Motion_02.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="Pfol_Container">
+        <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/m34d2a37zs.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div class="wistia_embed wistia_async_m34d2a37zs seo=false videoFoam=true muted=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/m34d2a37zs/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/8315pbv0fe.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div
+                class="wistia_embed wistia_async_8315pbv0fe seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/8315pbv0fe/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/ibeb8np3ct.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div
+                class="wistia_embed wistia_async_ibeb8np3ct seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/ibeb8np3ct/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/orgp20iuap.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div
+                class="wistia_embed wistia_async_orgp20iuap seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/orgp20iuap/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/hpa4u1qk99.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div
+                class="wistia_embed wistia_async_hpa4u1qk99 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/hpa4u1qk99/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PfolCarouselContainer">
+            <script src="https://fast.wistia.com/embed/medias/qi9yujub08.jsonp" async></script>
+
+            <div class="wistia_responsive_wrapper" style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                ">
+              <div
+                class="wistia_embed wistia_async_qi9yujub08 seo=false videoFoam=true muted=true playSuspendedOffScreen=true"
+                style="height: 100%; position: relative; width: 100%">
+                <div class="wistia_swatch" style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    ">
+                  <img src="https://fast.wistia.com/embed/medias/qi9yujub08/swatch" style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      " alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="SocWrapper">
+      <div class="PLI_Social" onclick="PLI_Click(this)">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle"><span>Social</span></p>
+          <p class="ViewProj">
+            View<br /><span class="highlight">Projects</span>
+          </p>
+        </div>
+      </div>
+      <div class="Pfol_Social_Content Pfol_Hover_Content">
+        <img class="PF_Image" src="Image/Social.jpg" width="400" height="500" alt="SocialCover" loading="lazy" />
+      </div>
+      <div class="Pfol_Container">
+        <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_BlueMoon_01.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_AceFace_01.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_Sesire_01.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_Accointing_01.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_Blanx_01.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/Social/Social_SocialsMIX.jpg" width="400" height="500"
+              alt="SocialPortfolioImage" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ThreeDWrapper">
+      <div class="PLI_3D" onclick="PLI_Click(this)">
+        <div class="Portfolio_ListItem">
+          <p class="Portfolio_ListTitle"><span>3D</span></p>
+          <p class="ViewProj">
+            View<br /><span class="highlight">Projects</span>
+          </p>
+        </div>
+      </div>
+      <div class="Pfol_3D_Content Pfol_Hover_Content">
+        <img class="PF_Image" src="Image/3D.jpg" width="400" height="500" alt="3DCover" loading="lazy" />
+      </div>
+      <div class="Pfol_Container">
+        <div class="owl-carousel owl-theme EdgeFade SwipeCursorHere">
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3d_Sizzle_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3d_Sizzle_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3d_Sizzle_03.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Aceface_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Aceface_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_CitrusTwist_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_CitrusTwist_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Blanx_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Blanx_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Wazz_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_Wazz_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_SHARK_01.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+
+          <div class="PfolCarouselContainer">
+            <img class="PF_Image" src="Image/3D/3D_SHARK_02.jpg" width="400" height="500" alt="3DPortfolioImage"
+              loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="LogosWrapper">
+    <div class="LogoTapeBottom">
+      <img src="Image/ClientLogoTape.png" alt="Logos" />
+      <img src="Image/ClientLogoTape.png" alt="Logos" />
+    </div>
+    <div class="LogoTapeTop">
+      <img src="Image/ClientLogoTape.png" alt="Logos" />
+      <p class="LogoTapeVA">
+        <span>You may have also
+          <span class="highlight">seen my work</span> with:</span>
+      </p>
+      <img src="Image/ClientLogoTape.png" alt="Logos" />
+    </div>
+  </div>
+
+  <section ID="Footer" class="Section_Footer">
+    <div class="FooterFormBlock">
+      <div class="KeepInTouch">
+        <div class="CopyTitles">
+          <p class="txtload_Footer1">Keep in</p>
+          <p class="txtload_Footer1"><span class="highlight">touch!</span></p>
+        </div>
+        <div class="SocialWrapper">
+          <a href="https://instagram.com/samwdesign" target="_blank">
+            <div class="SocialButton">
+              <svg class="SocialLogos" viewBox="0 0 85 85">
+                <use xlink:href="SVG/InstagramLogo.svg#Layer_2"></use>
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/samwdesign/" target="_blank">
+            <div class="SocialButton">
+              <svg class="SocialLogos" viewBox="0 0 80 79.78">
+                <use xlink:href="SVG/LinkedInLogo.svg#Layer_2"></use>
+              </svg>
+            </div>
+          </a>
+
+          <a href="mailto:samwdsn@gmail.com" target="_blank">
+            <div class="SocialButton">
+              <svg class="SocialLogos" viewBox="0 0 80 79.78">
+                <use xlink:href="SVG/Email.svg#Layer_2"></use>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="ContactFormWrapper">
+        <form target="_blank" action="https://formsubmit.co/samwdsn@gmail.com" method="POST">
+          <input name="name" type="text" class="feedback-input" placeholder="Name" required />
+          <input name="email" type="text" class="feedback-input" placeholder="Email" required />
+          <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+          <input type="submit" value="SUBMIT" required />
+        </form>
+      </div>
+    </div>
+    <div class="footerText">
+      <p>
+        © Sam Walker • Freelance Creative Designer • Manchester, UK •
+        #DesignDoneBetter • 2025
+      </p>
+    </div>
+    <div class="customCursor01"></div>
+  </section>
+</body>
+
 </html>
